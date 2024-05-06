@@ -1,0 +1,19 @@
+-I don't know what is going on, but I'll be damned if I don't try it
+
+
+-repository clone
+git clone https://github.com/raff17/pupper-intro-code.git
+
+
+-move directory command
+cd pupper-intro-code/StanfordQuadruped-mini_pupper/src/
+
+-run files in terminal, "desired_file.py" is name of file I want to use/open
+sudo python3 desired_file.py
+
+
+
+
+
+-open file
+sudo desired_editor desired_file
