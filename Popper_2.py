@@ -33,10 +33,10 @@ def main():
 
     zero, pwm_per_degree_first_half, pwm_per_degree_second_half = setup_pwm()
 
-    # Example of a simple movement sequence for one leg using multiple servos
-    move_servo(zero, pwm_per_degree_first_half, 30, 10)  # Move to 30 degrees
-    move_servo(zero, pwm_per_degree_second_half, 60, 10) # Move to 60 degrees
-    move_servo(zero, pwm_per_degree_first_half, 0, 10)   # Reset to 0 degrees
+    # This is simple movement pattern for one leg using multiple servo angles
+    move_servo(zero, pwm_per_degree_first_half, 30, 10)  # Move to 30 deg
+    move_servo(zero, pwm_per_degree_second_half, 60, 10) # Move to 60 deg
+    move_servo(zero, pwm_per_degree_first_half, 0, 10)   # Reset to 0 deg
 
     print("Leg movement completed")
 
