@@ -52,16 +52,16 @@ def stop():
             "dpadx": 0})
 
 def move_foward():
-    drive_pub.send({"L1": 1, 
+    drive_pub.send({"L1": 0, 
             "R1": 0, 
             "x": 0, 
             "circle": 0, 
             "triangle": 0, 
             "L2": 0, 
             "R2": 0, 
-            "ly": 1, 
+            "ly": 0.7, 
             "lx": 0, 
-            "rx": 0, 
+            "rx": -0.4, 
             "message_rate": 20, 
             "ry": 0, 
             "dpady": 0, 
