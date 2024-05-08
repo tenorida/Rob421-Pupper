@@ -20,7 +20,7 @@ def activate():
             "dpadx": 0})
 
 def trot():
-    drive_pub.send({"L1": 1, 
+    drive_pub.send({"L1": 0, 
             "R1": 1, 
             "x": 0, 
             "circle": 0, 
@@ -117,7 +117,9 @@ def move_backwards():
 
 if __name__ == "__main__":
     activate()
+    time.sleep(1)
     trot()
+    time.sleep(1)
     while True:
         move_foward()
     # stop()
