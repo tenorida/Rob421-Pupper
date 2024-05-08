@@ -118,8 +118,6 @@ def move_backwards():
 if __name__ == "__main__":
     activate()
     trot()
-    while i != 4:
-        i = time()
+    while True:
         move_foward()
-    stop()
-    
+    # stop()
