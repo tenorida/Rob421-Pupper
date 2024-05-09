@@ -122,4 +122,5 @@ if __name__ == "__main__":
     time.sleep(1)
     while True:
         move_foward()
-    # stop()
+        time.sleep(5)
+    stop()
