@@ -120,7 +120,7 @@ if __name__ == "__main__":
     time.sleep(1)
     trot()
     time.sleep(1)
-    while True:
+    for i in range(0,4):
         move_foward()
         time.sleep(5)
     stop()
