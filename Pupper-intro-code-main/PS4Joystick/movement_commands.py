@@ -59,7 +59,7 @@ def move_foward():
             "triangle": 0, 
             "L2": 0, 
             "R2": 0, 
-            "ly": 1, 
+            "ly": 0.5, 
             "lx": 0, 
             "rx": 0, 
             "message_rate": 20, 
