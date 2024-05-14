@@ -36,7 +36,7 @@ def main():
 
         if current_movement == "forward":
             command.horizontal_velocity = np.array([0.1, 0])  # Move forward
-            state.behavior_state = BehaviorState.WALK
+            state.behavior_state = BehaviorState.TROT
         elif current_movement == "circle_left":
             command.horizontal_velocity = np.array([0, 0])  # No forward/backward movement
             command.yaw_rate = 0.5  # Turn left
