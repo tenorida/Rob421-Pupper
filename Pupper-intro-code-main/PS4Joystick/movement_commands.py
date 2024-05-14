@@ -51,7 +51,7 @@ def stop():
             "dpady": 0, 
             "dpadx": 0})
 
-def move_foward():
+def move_forward(x):
     drive_pub.send({"L1": 0, 
             "R1": 0, 
             "x": 0, 
@@ -59,7 +59,7 @@ def move_foward():
             "triangle": 0, 
             "L2": 0, 
             "R2": 0, 
-            "ly": 0.5, 
+            "ly": x, 
             "lx": 0, 
             "rx": 0, 
             "message_rate": 20, 
@@ -120,7 +120,8 @@ if __name__ == "__main__":
     time.sleep(1)
     trot()
     time.sleep(1)
-    for i in range(0,4):
+    t0 = time.time_ns
+    print(t0)
+    while (time.time_ns - t0) < 10000:
+        print(time.time_ns - t0)
         move_foward()
-        time.sleep(5)
-    stop()
