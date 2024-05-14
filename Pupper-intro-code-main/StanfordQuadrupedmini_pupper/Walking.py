@@ -9,11 +9,11 @@ def move():
     move.move_forward()
     print("move forward")
     MovementLib = move.MovementLib
-
+    print("I don't work")
     movementCtl = MovementScheme(MovementLib)
-    
+    print("this sucks")
     movementCtl.runMovementScheme()
-
+    print("why")
 if __name__ == "__main__":
     move()
     print("done")
