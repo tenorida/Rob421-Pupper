@@ -2,6 +2,7 @@
 
 from UDPComms import Publisher
 import time
+
 # L1 = activate/disactivate
 # R1 = transition between Rest mode and Trot mode.
 # circle = dance or hold for 3 seconds to turn off system
@@ -134,7 +135,7 @@ if __name__ == "__main__":
     time.sleep(1)
     for i in range(0,4):
         move_foward()
-        time.sleep(2)
+        time.sleep(1)
         move_left()
         time.sleep(1)
         move_backwards()
