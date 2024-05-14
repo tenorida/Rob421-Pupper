@@ -1,4 +1,4 @@
-#pupper_move_forward_fast
+#Cha Cha Slide
 # L1 = activate/disactivate
 # R1 = transition between Rest mode and Trot mode.
 # circle = dance or hold for 3 seconds to turn off system
