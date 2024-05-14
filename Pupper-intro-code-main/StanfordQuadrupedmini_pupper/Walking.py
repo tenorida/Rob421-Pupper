@@ -5,9 +5,9 @@ from src.MovementScheme import MovementScheme
 
 def move():
     move = MovementGroups()
-
-    Move.Move_forward()
-
+    
+    move.move_forward()
+    print("move forward")
     MovementLib = move.MovementLib
 
     movementCtl = MovementScheme(MovementLib)
