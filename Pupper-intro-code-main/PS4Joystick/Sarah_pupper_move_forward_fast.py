@@ -134,11 +134,15 @@ if __name__ == "__main__":
     time.sleep(1)
     for i in range(0,3):
         move_foward()
+        print("straight")
         time.sleep(1)
         move_left()
+        print("sideways")
         time.sleep(1)
         move_backwards()
+        print("take it back now y'all")
         time.sleep(1)
         move_right()
+        print("other side")
     stop()
 
