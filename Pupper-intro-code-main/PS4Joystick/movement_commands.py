@@ -122,6 +122,6 @@ if __name__ == "__main__":
     time.sleep(1)
     t0 = time.time_ns
     print(t0)
-    while (time.time_ns - t0) < 10000:
+while (time.time_ns - t0) < 10000:
         print(time.time_ns - t0)
         move_foward()
