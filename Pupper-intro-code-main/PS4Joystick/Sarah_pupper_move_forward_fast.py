@@ -120,10 +120,13 @@ def move_backwards():
 if __name__ == "__main__":
     activate()
     time.sleep(1)
-    trot()
-    time.sleep(1)
-    for i in range(0,4):
+    for i in range(0,3):
         move_foward()
-        time.sleep(5)
+        time.sleep(1)
+        move_left()
+        time.sleep(1)
+        move_backwards()
+        time.sleep(1)
+        move_right()
     stop()
 
