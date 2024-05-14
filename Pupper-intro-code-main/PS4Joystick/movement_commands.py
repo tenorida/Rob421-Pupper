@@ -4,14 +4,36 @@ import time
 drive_pub = Publisher(8830)
 
 def activate():
-    drive_pub.send({"L1": 1,  
+    drive_pub.send({"L1": 1, 
+            "R1": 0, 
+            "x": 0, 
+            "circle": 0, 
+            "triangle": 0, 
+            "L2": 0, 
+            "R2": 0, 
+            "ly": 0, 
+            "lx": 0, 
+            "rx": 0, 
             "message_rate": 20, 
-                   })
+            "ry": 0, 
+            "dpady": 0, 
+            "dpadx": 0})
 
 def trot():
-    drive_pub.send({"R1": 1, 
+    drive_pub.send({"L1": 0, 
+            "R1": 1, 
+            "x": 0, 
+            "circle": 0, 
+            "triangle": 0, 
+            "L2": 0, 
+            "R2": 0, 
+            "ly": 0, 
+            "lx": 0, 
+            "rx": 0, 
             "message_rate": 20, 
-                   })
+            "ry": 0, 
+            "dpady": 0, 
+            "dpadx": 0})
 
 def stop():
     drive_pub.send({"L1": 0, 
@@ -30,8 +52,20 @@ def stop():
             "dpadx": 0})
 
 def move_forward(x):
-    drive_pub.send({"ly": x, 
-            "message_rate": 20})
+    drive_pub.send({"L1": 0, 
+            "R1": 0, 
+            "x": 0, 
+            "circle": 0, 
+            "triangle": 0, 
+            "L2": 0, 
+            "R2": 0, 
+            "ly": x, 
+            "lx": 0, 
+            "rx": 0, 
+            "message_rate": 20, 
+            "ry": 0, 
+            "dpady": 0, 
+            "dpadx": 0})
     
 def move_left():
     drive_pub.send({"L1": 1, 
@@ -90,4 +124,5 @@ if __name__ == "__main__":
     #print (t0)
     time.sleep(5)
     while True:
-            stop()
+            move_forward(0.6)
+
