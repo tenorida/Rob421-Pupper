@@ -42,7 +42,7 @@ from src.MovementGroup import MovementGroups
 
 Move = MovementGroups()
 
-Move.look_right()
+#Move.look_right()
 #Move.look_upperright()
 #Move.look_up()
 #Move.look_upperleft()
@@ -52,10 +52,10 @@ Move.look_right()
 #Move.look_rightlower()
 #Move.look_right()
 #Move.stop()
-#Move.move_right()
-#Move.move_forward()
-#Move.move_left()
-#Move.move_backward()
+Move.move_right()
+Move.move_forward()
+Move.move_left()
+Move.move_backward()
 #Move.move_right()
 #Move.stop()
 
