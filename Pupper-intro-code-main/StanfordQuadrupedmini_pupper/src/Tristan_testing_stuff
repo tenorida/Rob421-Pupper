@@ -1,5 +1,4 @@
-from src.MovementGroup import MovementGroups
-
+from src.MovementGroup imort MovementGroups
 Move = MovementGroups()
 
 Move.move_forward()
