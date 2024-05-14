@@ -6,8 +6,8 @@ from src.MovementScheme import MovementScheme
 def move():
     move = MovementGroups()
     
-    move.move_left()
-    print("move left")
+    move.move_forward()
+    print("move forward")
     MovementLib = move.MovementLib
 
     movementCtl = MovementScheme(MovementLib)
