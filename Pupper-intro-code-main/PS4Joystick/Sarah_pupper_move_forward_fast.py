@@ -129,20 +129,111 @@ def move_backwards():
             "dpady": 0, 
             "dpadx": 0})
 
+def move_jumpdown():
+    drive_pub.send({"L1": 1, 
+            "R1": 0, 
+            "x": -1, 
+            "circle": 0, 
+            "triangle": 0, 
+            "L2": 0, 
+            "R2": 0, 
+            "ly": 0, 
+            "lx": 0, 
+            "rx": 0, 
+            "message_rate": 20, 
+            "ry": 0, 
+            "dpady": 0, 
+            "dpadx": 0})
+def move_jumpup():
+    drive_pub.send({"L1": 1, 
+            "R1": 0, 
+            "x": 1, 
+            "circle": 0, 
+            "triangle": 0, 
+            "L2": 0, 
+            "R2": 0, 
+            "ly": 0, 
+            "lx": 0, 
+            "rx": 0, 
+            "message_rate": 20, 
+            "ry": 0, 
+            "dpady": 0, 
+            "dpadx": 0})
+
+def move_chacha():
+    drive_pub.send({"L1": 1, 
+            "R1": 0, 
+            "x": 1, 
+            "circle": 1, 
+            "triangle": 0, 
+            "L2": 0, 
+            "R2": 0, 
+            "ly": 0, 
+            "lx": 0, 
+            "rx": 0, 
+            "message_rate": 20, 
+            "ry": 0, 
+            "dpady": 0, 
+            "dpadx": 0})
+
+def move_frontrightfoot():
+    drive_pub.send({"L1": 1, 
+            "R1": 0, 
+            "x": 1, 
+            "circle": 0, 
+            "triangle": 0, 
+            "L2": 0, 
+            "R2": 0, 
+            "ly": 0, 
+            "lx": 0, 
+            "rx": 0, 
+            "message_rate": 20, 
+            "ry": 0, 
+            "dpady": 0, 
+            "dpadx": 0})
+
+def move_frontleftfoot():
+    drive_pub.send({"L1": 1, 
+            "R1": 0, 
+            "x": 1, 
+            "circle": 0, 
+            "triangle": 0, 
+            "L2": 0, 
+            "R2": 0, 
+            "ly": 0, 
+            "lx": 0, 
+            "rx": 0, 
+            "message_rate": 20, 
+            "ry": 0, 
+            "dpady": 0, 
+            "dpadx": 0})
+
 if __name__ == "__main__":
     activate()
     time.sleep(1)
-    for i in range(0,3):
-        move_foward()
-        print("straight")
-        time.sleep(1)
+    for i in range(0,4):
+        #to the left
         move_left()
-        print("sideways")
-        time.sleep(1)
+        time.sleep(2)
+        #take it back now y'all
         move_backwards()
-        print("take it back now y'all")
+        time.sleep(2)
+        #one hop this time
+        move_jumpdown()
         time.sleep(1)
-        move_right()
-        print("other side")
+        move_jumpup()
+        time.sleep(2)
+        #one hop this time
+        move_jumpdown()
+        time.sleep(1)
+        move_jumpup()
+        time.sleep(2)
+        #right foot two stomps
+        #move_frontrightfoot - PMW 13 - leg_move file
+        #left foot two stomps
+        #move_leftfrontfoot - PMW 11 - leg_move file
+        #cha cha real smooth
+        move_chacha()
+
     stop()
 
