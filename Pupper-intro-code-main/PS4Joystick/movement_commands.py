@@ -120,8 +120,7 @@ if __name__ == "__main__":
     time.sleep(1)
     trot()
     time.sleep(1)
-    t0 = time.time_ns
-    print(t0)
-while (time.time_ns - t0) < 10000:
-        print(time.time_ns - t0)
-        move_foward()
+    t0 = time.time() * 10^-3 # msec
+    #print (t0)
+    time.sleep(5)
+    move_forward()
