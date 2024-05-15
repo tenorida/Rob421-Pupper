@@ -123,7 +123,7 @@ if __name__ == "__main__":
     for i in range(0,3):
         trot()
         print("start trot")
-        time.sleep(1)
+        time.sleep(7)
         print("moving foward")
         k = 0
         while k<25:
