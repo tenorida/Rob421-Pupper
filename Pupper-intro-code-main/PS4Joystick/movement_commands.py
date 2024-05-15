@@ -133,6 +133,6 @@ if __name__ == "__main__":
         #move_left()
         #time.sleep(5)
         diff = (time.time() - t0) * pow(10,3) # msec
-        print(diff)
+        #print(diff)
     print("done")
 
