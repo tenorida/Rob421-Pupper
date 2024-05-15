@@ -122,11 +122,11 @@ if __name__ == "__main__":
     #print (t0)
     trot()
     print("start trot")
-    time.sleep(5)
+    time.sleep(1)
     print("moving foward")
     for i in range(0,7):
         move_forward(0.8)
-        time.sleep(3)
+        time.sleep(1)
         #print("adjusting")
         #move_left()
         #time.sleep(5)
