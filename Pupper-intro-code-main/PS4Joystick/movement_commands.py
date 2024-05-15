@@ -124,9 +124,9 @@ if __name__ == "__main__":
     print("start trot")
     time.sleep(5)
     print("moving foward")
-    for i in range(0,3):
-        move_forward(1)
-        time.sleep(5)
+    for i in range(0,7):
+        move_forward(0.2)
+        time.sleep(1)
         #print("adjusting")
         #move_left()
         #time.sleep(5)
