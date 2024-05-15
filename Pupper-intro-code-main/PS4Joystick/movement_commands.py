@@ -117,6 +117,7 @@ def move_backwards():
 
 if __name__ == "__main__":
     activate()
+    trot()
     time.sleep(5)
     print("adjusting")
     move_left()
