@@ -256,7 +256,9 @@ if __name__ == "__main__":
         time.sleep(2)
         #right foot two stomps
         move_servo13()
+        move_servo13()
         #left foot two stomps
+        move_servo11()
         move_servo11()
         #cha cha real smooth
         move_chacha()
