@@ -26,27 +26,41 @@ total_pwm_change_second_half = one_eight - zero
 
 pwm_per_degree_first_half = total_pwm_change_first_half/mid_degrees
 pwm_per_degree_second_half = total_pwm_change_second_half/total_degrees
+class MoveServos
+
+    def move_servo13():
+        global zero
+        what_degree = 30
+        if what_degree <= 90:
+            degree_finder = zero + (pwm_per_degree_first_half * what_degree)
+        else:
+            degree_finder = zero + (pwm_per_degree_second_half * what_degree)
+
+        os.system("echo" + str(degree_finder) + "> /sys/class/pwm/pwmchip0/pwm13/duty_cycle")
+        time.sleep(1)
+        os.system("echo 2500000 > /sys/class/pwm/pwmchip0/pwm13/duty_cycle")
+        time.sleep(1)
+        os.system("echo 500000 > /sys/class/pwm/pwmchip0/pwm13/duty_cycle")
 
 
-def move_servo15():
-    global zero
-    what_degree = 30
-    if what_degree <= 90:
-        degree_finder = zero + (pwm_per_degree_first_half * what_degree)
-    else:
-        degree_finder = zero + (pwm_per_degree_second_half * what_degree)
-
-    os.system("echo" + str(degree_finder) + "> /sys/class/pwm/pwmchip0/pwm11/duty_cycle")
-    time.sleep(1)
-    os.system("echo 2500000 > /sys/class/pwm/pwmchip0/pwm13/duty_cycle")
-    time.sleep(1)
-    os.system("echo 500000 > /sys/class/pwm/pwmchip0/pwm13/duty_cycle")
-
-    print("done")
+    def move_servo11():
+        global zero
+        what_degree = 30
+        if what_degree <= 90:
+            degree_finder = zero + (pwm_per_degree_first_half * what_degree)
+        else:
+            degree_finder = zero + (pwm_per_degree_second_half * what_degree)
+    
+        os.system("echo" + str(degree_finder) + "> /sys/class/pwm/pwmchip0/pwm11/duty_cycle")
+        time.sleep(1)
+        os.system("echo 2500000 > /sys/class/pwm/pwmchip0/pwm11/duty_cycle")
+        time.sleep(1)
+        os.system("echo 500000 > /sys/class/pwm/pwmchip0/pwm11/duty_cycle")
+        print("done")
 
 def main():
     os.system("sudo systemctl stop robot")
-    move_servo15()
+    move_servo13()
 
 if __name__ == "__main__":
     main()
