@@ -124,7 +124,7 @@ if __name__ == "__main__":
     t0 = time.time()
     diff = (time.time() - t0)
     print (t0 * pow(10,3))
-    print(diff)
+    print(diff* pow(10,3))
     print("moving foward")
     #while diff < 1:
         #move_forward(0.8)
