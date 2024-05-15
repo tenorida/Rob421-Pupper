@@ -118,15 +118,14 @@ def move_backwards():
 if __name__ == "__main__":
     activate()
     time.sleep(1)
-	#t0 = time.time() * pow(10,-3) # msec
-	#print (t0)
+    #t0 = time.time() * pow(10,-3) # msec
+    #print (t0)
     trot()
     print("start trot")
     for i in range(0,3):
         time.sleep(5)
         print("moving foward")
         move_forward(1)
-        
         time.sleep(5)
         print("adjusting")
         move_left()
