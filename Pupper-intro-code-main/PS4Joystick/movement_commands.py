@@ -125,7 +125,7 @@ if __name__ == "__main__":
     time.sleep(5)
     print("moving foward")
     for i in range(0,7):
-        move_forward(0.2)
+        move_forward(0.8)
         time.sleep(3)
         #print("adjusting")
         #move_left()
