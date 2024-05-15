@@ -238,32 +238,33 @@ if __name__ == "__main__":
     activate()
     time.sleep(1)
     for i in range(0,4):
-        #to the left
+        #    to the left
         move_left()
         time.sleep(2)
-        #take it back now y'all
-        move_backwards()
-        time.sleep(2)
-        #one hop this time
-        move_jumpdown()
-        time.sleep(1)
-        move_jumpup()
-        time.sleep(2)
-        #one hop this time
-        move_jumpdown()
-        time.sleep(1)
-        move_jumpup()
-        time.sleep(2)
-        #right foot two stomps
-        move_servo13()
-        time.sleep(2)
-        move_servo13()
-        #left foot two stomps
-        move_servo11()
-        time.sleep(2)
-        move_servo11()
-        time.sleep(2)
-        #cha cha real smooth
-        move_chacha()
+        #    take it back now y'all
+        #move_backwards()
+        #time.sleep(2)
+        #    one hop this time
+        #move_jumpdown()
+        #time.sleep(1)
+        #move_jumpup()
+        #time.sleep(2)
+        #    one hop this time
+        #move_jumpdown()
+        #time.sleep(1)
+        #move_jumpup()
+        #time.sleep(2)
+        #    right foot two stomps
+        #move_servo13()
+        #time.sleep(2)
+        #move_servo13()
+        #time.sleep(2)
+        #    left foot two stomps
+        #move_servo11()
+        #time.sleep(2)
+        #move_servo11()
+        #time.sleep(2)
+        #    cha cha real smooth
+        #move_chacha()
 
     stop()
