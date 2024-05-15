@@ -239,11 +239,11 @@ if __name__ == "__main__":
     time.sleep(1)
     for i in range(0,4):
         #    to the left
-        move_left()
-        time.sleep(2)
-        #    take it back now y'all
-        #move_backwards()
+        #move_left() works
         #time.sleep(2)
+        #    take it back now y'all
+        move_backwards()
+        time.sleep(2)
         #    one hop this time
         #move_jumpdown()
         #time.sleep(1)
