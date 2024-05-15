@@ -131,5 +131,4 @@ if __name__ == "__main__":
         move_left()
         time.sleep(5)
     print("done")
-    stop()
 
