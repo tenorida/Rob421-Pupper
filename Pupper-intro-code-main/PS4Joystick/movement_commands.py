@@ -122,17 +122,17 @@ if __name__ == "__main__":
     print("start trot")
     time.sleep(1)
     t0 = time.time()
-    diff = (time.time() - t0) * pow(10,-3) # msec
-    print (t0 * pow(10,-3))
+    diff = (time.time() - t0)
+    print (t0)
     print(diff)
     print("moving foward")
-    while diff < 1:
+    #while diff < 1:
         #move_forward(0.8)
         #time.sleep(1)
         #print("adjusting")
         #move_left()
         #time.sleep(5)
-        diff = (time.time() - t0) * pow(10,-3) # msec
-        print(diff)
+        #diff = (time.time() - t0) * pow(10,-3) # msec
+        #print(diff)
     print("done")
 
