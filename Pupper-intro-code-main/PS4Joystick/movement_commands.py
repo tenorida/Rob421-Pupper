@@ -121,8 +121,6 @@ if __name__ == "__main__":
     trot()
     time.sleep(1)
     #t0 = time.time() * pow(10,-3) # msec
-    #print (t0)
-    time.sleep(5)
-    while True:
-            move_forward(0.6)
+    #print (t0) 
+    move_forward(0.6)
 
