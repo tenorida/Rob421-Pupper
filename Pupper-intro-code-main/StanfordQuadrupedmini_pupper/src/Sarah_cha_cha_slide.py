@@ -266,5 +266,5 @@ if __name__ == "__main__":
         #time.sleep(2)
         #    cha cha real smooth
         #move_chacha()
-
+        print ("done")
     stop()
