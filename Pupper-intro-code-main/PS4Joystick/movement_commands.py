@@ -52,7 +52,7 @@ def stop():
             "dpadx": 0})
 
 def move_forward(x):
-    drive_pub.send({"L1": 1, 
+    drive_pub.send({"L1": 0, 
             "R1": 0, 
             "x": 0, 
             "circle": 0, 
@@ -84,7 +84,7 @@ def move_left():
             "dpadx": 0})
 
 def move_right():
-    drive_pub.send({"L1": 1, 
+    drive_pub.send({"L1": 0, 
             "R1": 0, 
             "x": 0, 
             "circle": 0, 
@@ -100,7 +100,7 @@ def move_right():
             "dpadx": 0})
 
 def move_backwards():
-    drive_pub.send({"L1": 1, 
+    drive_pub.send({"L1": 0, 
             "R1": 0, 
             "x": 0, 
             "circle": 0, 
