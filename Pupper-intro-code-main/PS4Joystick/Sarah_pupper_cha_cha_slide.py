@@ -176,6 +176,18 @@ def move_chacha():
             "dpady": 0, 
             "dpadx": 0})
 
+import os
+import sys
+import time
+
+zero = 500000
+ninety = 1500000
+one_eight = 2500000 
+total_degrees = 180
+mid_degrees = 90
+
+
+
 def move_frontrightfoot():
     drive_pub.send({"L1": 1, 
             "R1": 0, 
