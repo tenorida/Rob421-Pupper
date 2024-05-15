@@ -12,8 +12,8 @@
 # rx = turn left or right (pitch)
 # ry = pitches the robot forward
 
-from src.leg_move.MoveServos import move_servo13
-from src.leg_move.MoveServos import move_servo11
+from src.MoveServos import move_servo13
+from src.MoveServos import move_servo11
 
 from UDPComms import Publisher
 import time
