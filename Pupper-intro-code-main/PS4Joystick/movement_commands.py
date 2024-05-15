@@ -121,9 +121,9 @@ if __name__ == "__main__":
     trot()
     print("start trot")
     time.sleep(1)
-    t0 = time.time() * pow(10,-3)
+    t0 = time.time()
     diff = (time.time() - t0) * pow(10,-3) # msec
-    print (t0)
+    print (t0 * pow(10,-3))
     print(diff)
     print("moving foward")
     while diff < 10000:
