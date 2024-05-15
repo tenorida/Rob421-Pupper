@@ -13,7 +13,7 @@
 # ry = pitches the robot forward
 
 from StanfordQuadrupedmini_pupper.src.leg_move.MoveServos import move_servo13
-from StanfordQuadrupedmini_pupper.src.MoveServos import move_servo11
+from StanfordQuadrupedmini_pupper.src.leg_move.MoveServos import move_servo11
 
 from UDPComms import Publisher
 import time
@@ -255,9 +255,9 @@ if __name__ == "__main__":
         move_jumpup()
         time.sleep(2)
         #right foot two stomps
-        #move_frontrightfoot - PMW 13 - leg_move file
+        move_servo13()
         #left foot two stomps
-        #move_leftfrontfoot - PMW 11 - leg_move file
+        move_servo11()
         #cha cha real smooth
         move_chacha()
 
