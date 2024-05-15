@@ -26,7 +26,7 @@ total_pwm_change_second_half = one_eight - zero
 
 pwm_per_degree_first_half = total_pwm_change_first_half/mid_degrees
 pwm_per_degree_second_half = total_pwm_change_second_half/total_degrees
-class MoveServos
+class MoveServos:
 
     def move_servo13():
         global zero
