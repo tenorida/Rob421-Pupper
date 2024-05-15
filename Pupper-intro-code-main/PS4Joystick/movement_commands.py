@@ -123,7 +123,7 @@ if __name__ == "__main__":
     time.sleep(1)
     t0 = time.time()
     diff = (time.time() - t0)
-    print (t0)
+    print (t0 * pow(10,3))
     print(diff)
     print("moving foward")
     #while diff < 1:
@@ -132,7 +132,7 @@ if __name__ == "__main__":
         #print("adjusting")
         #move_left()
         #time.sleep(5)
-        #diff = (time.time() - t0) * pow(10,-3) # msec
+        #diff = (time.time() - t0) * pow(10,3) # msec
         #print(diff)
     print("done")
 
