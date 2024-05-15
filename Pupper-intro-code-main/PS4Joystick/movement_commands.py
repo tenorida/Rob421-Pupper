@@ -20,7 +20,7 @@ def activate():
             "dpadx": 0})
 
 def trot():
-    drive_pub.send({"L1": 1, 
+    drive_pub.send({"L1": 0, 
             "R1": 1, 
             "x": 0, 
             "circle": 0, 
