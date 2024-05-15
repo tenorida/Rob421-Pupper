@@ -126,13 +126,13 @@ if __name__ == "__main__":
     print (t0 * pow(10,3))
     print(diff* pow(10,3))
     print("moving foward")
-    #while diff < 1:
-        #move_forward(0.8)
-        #time.sleep(1)
+    while diff < 5000:
+        move_forward(0.8)
+        time.sleep(1)
         #print("adjusting")
         #move_left()
         #time.sleep(5)
-        #diff = (time.time() - t0) * pow(10,3) # msec
-        #print(diff)
+        diff = (time.time() - t0) * pow(10,3) # msec
+        print(diff)
     print("done")
 
