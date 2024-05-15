@@ -123,7 +123,7 @@ if __name__ == "__main__":
     time.sleep(1)
     #t0 = time.time() * pow(10,-3) # msec
     #print (t0)
-    for i in range(0,4):
+    for i in range(0,3):
         move_forward(0.6)
         print("moving foward")
         time.sleep(5)
