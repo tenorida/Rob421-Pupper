@@ -68,7 +68,7 @@ def move_forward(x):
             "dpadx": 0})
     
 def move_left():
-    drive_pub.send({"L1": 1, 
+    drive_pub.send({"L1": 0, 
             "R1": 0, 
             "x": 0, 
             "circle": 0, 
