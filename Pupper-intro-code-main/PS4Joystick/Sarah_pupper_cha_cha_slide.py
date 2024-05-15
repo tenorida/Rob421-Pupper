@@ -12,6 +12,9 @@
 # rx = turn left or right (pitch)
 # ry = pitches the robot forward
 
+from StanfordQuadrupedmini_pupper.src.leg_move import move_servo13
+from StanfordQuadrupedmini_pupper.src.leg_move import move_servo11
+
 from UDPComms import Publisher
 import time
 
@@ -219,6 +222,17 @@ def move_frontleftfoot():
             "ry": 0, 
             "dpady": 0, 
             "dpadx": 0})
+
+
+total_pwm_change_first_half = ninety - zero
+total_pwm_change_second_half = one_eight - zero
+
+
+pwm_per_degree_first_half = total_pwm_change_first_half/mid_degrees
+pwm_per_degree_second_half = total_pwm_change_second_half/total_degrees
+
+
+
 
 if __name__ == "__main__":
     activate()
