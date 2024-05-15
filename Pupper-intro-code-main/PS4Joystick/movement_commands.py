@@ -125,11 +125,8 @@ if __name__ == "__main__":
     for i in range(0,3):
         time.sleep(5)
         print("moving foward")
-        k = 0
-        while k<25:
-            move_forward(0.6)
-            k += 1
-            stop()
+        move_forward(1)
+        
         time.sleep(5)
         print("adjusting")
         move_left()
