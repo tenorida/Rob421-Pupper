@@ -124,11 +124,14 @@ if __name__ == "__main__":
     #t0 = time.time() * pow(10,-3) # msec
     #print (t0)
     for i in range(0,3):
-        move_forward(0.6)
         print("moving foward")
-        time.sleep(10)
-        move_left()
+        k = 0
+        while k<25:
+            move_forward(0.6)
+            k += 1
+        time.sleep(7)
         print("adjusting")
-        time.sleep(10)
+        move_left()
+        time.sleep(7)
     print("done")
     stop()
