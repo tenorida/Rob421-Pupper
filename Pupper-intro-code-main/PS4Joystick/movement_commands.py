@@ -121,6 +121,7 @@ if __name__ == "__main__":
     time.sleep(5)
     print("adjusting")
     move_left()
+    move_forward(0.6)
     time.sleep(5)
     print("done")
     stop()
