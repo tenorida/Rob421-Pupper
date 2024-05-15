@@ -121,8 +121,8 @@ if __name__ == "__main__":
 	#t0 = time.time() * pow(10,-3) # msec
 	#print (t0)
     trot()
+    print("start trot")
     for i in range(0,3):
-        print("start trot")
         time.sleep(5)
         print("moving foward")
         k = 0
