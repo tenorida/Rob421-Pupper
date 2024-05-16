@@ -59,7 +59,7 @@ class MoveServos:
         print("done")
 
 def main():
-    os.system("sudo systemctl stop robot")
+    # os.system("sudo systemctl stop robot")
     move_servo13()
 
 if __name__ == "__main__":
