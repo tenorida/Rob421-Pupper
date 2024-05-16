@@ -75,33 +75,29 @@ if __name__ == "__main__":
     #     time.sleep(0.2)
     #     controller.move_left()
     # controller.stop()
+    for idx in range(4):
+        controller.trot()
+        start_time = time.time()
+        duration = 0.5
+        end_time = start_time + duration
 
+        while time.time() < end_time:
+            controller.move_forward()
+            time.sleep(0.02)  
 
+        end_time = time.time() + duration
+        while time.time() < end_time:
+            controller.move_left()
+            time.sleep(0.02)
 
+        end_time = time.time() + duration
+        while time.time() < end_time:
+            controller.move_backwards()
+            time.sleep(0.02)
 
-        for idx in range(4):
-            controller.trot()
-            start_time = time.time()
-            duration = 0.5
-            end_time = start_time + duration
-    
-            while time.time() < end_time:
-                controller.move_forward()
-                time.sleep(0.02)  
-    
-            end_time = time.time() + duration
-            while time.time() < end_time:
-                controller.move_left()
-                time.sleep(0.02)
-    
-            end_time = time.time() + duration
-            while time.time() < end_time:
-                controller.move_backwards()
-                time.sleep(0.02)
-    
-            end_time = time.time() + duration
-            while time.time() < end_time:
-                controller.move_left()
-                time.sleep(0.02)
+        end_time = time.time() + duration
+        while time.time() < end_time:
+            controller.move_left()
+            time.sleep(0.02)
 
-        controller.stop()
+    controller.stop()
