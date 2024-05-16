@@ -103,7 +103,7 @@ def move_left():
             "L2": 0, 
             "R2": 0, 
             "ly": 0, 
-            "lx": 1, 
+            "lx": -1, 
             "rx": 0, 
             "message_rate": 20, 
             "ry": 0, 
