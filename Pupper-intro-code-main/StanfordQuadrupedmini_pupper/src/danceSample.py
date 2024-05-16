@@ -37,12 +37,15 @@
 # move_leftback()
 # move_rightback()
 #
-from MovementGroup import MovementGroups
 
+from UDPComms import Publisher
+import time
+from MovementGroup import MovementGroups
+from PS4Joystick.movement_commands import trot
 #Move = MovementGroups()
 
-
-
+trot()
+time.sleep(0.2)
 MovementGroups.look_right()
 MovementGroups.look_upperright()
 MovementGroups.look_up()
