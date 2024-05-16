@@ -201,9 +201,9 @@ def move_chacha():
 if __name__ == "__main__":
     activate()
     time.sleep(1)
-    # for i in range(0,2):
-    #     trot()
-    #     time.sleep(1)
+    for i in range(0,2):
+        trot()
+        time.sleep(1)
     #     #    to the left
     while True:
         print("move left")
