@@ -204,7 +204,7 @@ if __name__ == "__main__":
     # for i in range(0,2):
     #     trot()
     #     time.sleep(1)
-    #     #    to the left
+        #    to the left
     while True:
         print("move left")
         #move_left()
@@ -234,5 +234,5 @@ if __name__ == "__main__":
         #time.sleep(1)
         #    cha cha real smooth
         #move_chacha()
-        print ("done")
-    stop()
+    #     print ("done")
+    # stop()
