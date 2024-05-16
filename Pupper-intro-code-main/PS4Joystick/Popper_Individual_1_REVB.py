@@ -30,6 +30,7 @@ class RobotController:
     def send_command(self, updates):
         command = self.default_command.copy()
         command.update(updates)
+        print(command)
         try:
             self.drive_pub.send(command)
         except Exception as e:
