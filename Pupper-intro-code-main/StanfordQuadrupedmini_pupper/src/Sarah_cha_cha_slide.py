@@ -207,7 +207,7 @@ if __name__ == "__main__":
         trot()
         time.sleep(1)
         #    to the left
-        while true:
+        while True:
             move_left()
             time.sleep(0.2)
         #    take it back now y'all
