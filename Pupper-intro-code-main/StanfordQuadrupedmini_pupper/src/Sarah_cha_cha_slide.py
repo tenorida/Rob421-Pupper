@@ -204,6 +204,8 @@ if __name__ == "__main__":
     activate()
     time.sleep(1)
     for i in range(0,2):
+        trot()
+        time.sleep(1)
         #    to the left
         move_left()
         #time.sleep(2)
