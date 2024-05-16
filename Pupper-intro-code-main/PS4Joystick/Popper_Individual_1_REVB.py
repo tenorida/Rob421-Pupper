@@ -33,7 +33,7 @@ class RobotController:
         try:
             self.drive_pub.send(command)
         except Exception as e:
-            print(f"Failed to send command: {e}")
+            print("Failed to send command: {e}")
 
     def activate(self):
         self.send_command({"L1": 1})
@@ -63,7 +63,7 @@ if __name__ == "__main__":
     controller = RobotController()
     controller.activate()
     time.sleep(1)
-    for _ in range(4):
+    for idx in range(4):
         controller.move_forward()
         time.sleep(1)
         controller.move_left()
