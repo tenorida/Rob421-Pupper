@@ -16,7 +16,7 @@
 # Description: FPC(Flexible Programmable Choreography) APIs
 #
 import numpy as np
-from src.MovementScheme import Movements 
+from MovementScheme import Movements 
 
 "please comfirm the size of legs,speed,attitude all same in youe design movements"
 class MovementGroups:
