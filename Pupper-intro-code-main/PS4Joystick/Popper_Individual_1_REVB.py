@@ -17,7 +17,7 @@ import time
 # ry = pitches the robot forward
 
 class RobotController:
-    def __init__(self, port=8830, message_rate=20):
+    def __init__(self, port=8830, message_rate=50):
         self.drive_pub = Publisher(port)
         self.message_rate = message_rate
         self.default_command = {
