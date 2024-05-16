@@ -218,7 +218,7 @@ if __name__ == "__main__":
         #move_jumpup()
         #time.sleep(1)
         #    one hop this time
-        move_jump()
+        jump()
         #time.sleep(1)
         #move_jumpup()
         #time.sleep(1)
