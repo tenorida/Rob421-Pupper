@@ -65,6 +65,8 @@ if __name__ == "__main__":
     controller.activate()
     time.sleep(1)
     for idx in range(4):
+        controller.trot()
+        time.sleep(1)
         controller.move_forward()
         time.sleep(1)
         controller.move_left()
