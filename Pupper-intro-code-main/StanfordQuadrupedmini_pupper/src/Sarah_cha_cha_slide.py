@@ -230,9 +230,9 @@ if __name__ == "__main__":
         #MoveServos.move_servo13()
         #time.sleep(1)
         #    left foot two stomps
-        MoveServos.move_servo12()
+        MoveServos.move_servo10()
         time.sleep(1)
-        #MoveServos.move_servo12()
+        #MoveServos.move_servo10()
         #time.sleep(1)
         #    cha cha real smooth
         #move_chacha()
