@@ -41,7 +41,7 @@
 from UDPComms import Publisher
 import time
 from MovementGroup import MovementGroups
-from PS4Joystick.movement_commands import trot
+from movement_commands import trot
 #Move = MovementGroups()
 
 trot()
