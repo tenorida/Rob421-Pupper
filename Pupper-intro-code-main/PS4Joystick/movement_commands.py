@@ -3,7 +3,7 @@ import time
 
 drive_pub = Publisher(8830)
 
-def activate():
+def ActDeactivate():
     drive_pub.send({"L1": 1, 
             "R1": 0, 
             "x": 0, 
@@ -116,7 +116,7 @@ def move_backwards():
             "dpadx": 0})
 
 if __name__ == "__main__":
-    activate()
+    ActDeactivate()
     time.sleep(1)
     trot()
     print("start trot")
@@ -134,6 +134,6 @@ if __name__ == "__main__":
         #time.sleep(5)
         diff = (time.time() - t0) * pow(10,3) # msec
         #print(diff)
-    activate()
+    ActDeactivate()
     print("done")
 
