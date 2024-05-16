@@ -138,7 +138,7 @@ def move_backwards():
             "dpadx": 0})
 
 def move_jumpdown():
-    drive_pub.send({"L1": 1, 
+    drive_pub.send({"L1": 0, 
             "R1": 0, 
             "x": -1, 
             "circle": 0, 
@@ -153,7 +153,7 @@ def move_jumpdown():
             "dpady": 0, 
             "dpadx": 0})
 def move_jumpup():
-    drive_pub.send({"L1": 1, 
+    drive_pub.send({"L1": 0, 
             "R1": 0, 
             "x": 1, 
             "circle": 0, 
@@ -201,9 +201,9 @@ def move_chacha():
 if __name__ == "__main__":
     activate()
     time.sleep(1)
-    for i in range(0,2):
-        trot()
-        time.sleep(1)
+    # for i in range(0,2):
+    #     trot()
+    #     time.sleep(1)
     #     #    to the left
     while True:
         print("move left")
@@ -218,7 +218,7 @@ if __name__ == "__main__":
         #move_jumpup()
         #time.sleep(1)
         #    one hop this time
-        # jump()
+        jump()
         #time.sleep(1)
         #move_jumpup()
         #time.sleep(1)
