@@ -168,6 +168,15 @@ def move_jumpup():
             "dpady": 0, 
             "dpadx": 0})
 
+def jump():
+    move_jumpup()
+    time.sleep(0.2)
+    move_jumpup()
+    time.sleep(0.2)
+    move_jumpup()
+    time.sleep(0.2)
+    
+
 def move_chacha():
     Move.look_right()
     Move.look_upperright()
@@ -209,7 +218,7 @@ if __name__ == "__main__":
         #move_jumpup()
         #time.sleep(1)
         #    one hop this time
-        move_jumpdown()
+        move_jump()
         #time.sleep(1)
         #move_jumpup()
         #time.sleep(1)
