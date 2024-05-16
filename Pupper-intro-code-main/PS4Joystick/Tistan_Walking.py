@@ -112,8 +112,7 @@ def move_right():
     
 if __name__ == "__main__":
     activate()
-    stop()
+    time.sleep(2)
     move_forward()
-    move_backward()
-    move_left()
-    move_right()
+    time.sleep(5)
+    time.stop()
