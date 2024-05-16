@@ -12,15 +12,10 @@
 # rx = turn left or right (pitch)
 # ry = pitches the robot forward
 
-import os
-import sys
-import time
 
-zero = 500000
-ninety = 1500000
-one_eight = 2500000 
-total_degrees = 180
-mid_degrees = 90
+from MovementGroup import MovementGroups
+Move = MovementGroups()
+
 
 from  leg_move import MoveServos
 from  leg_move import MoveServos
@@ -174,28 +169,22 @@ def move_jumpup():
             "dpadx": 0})
 
 def move_chacha():
-    drive_pub.send({"L1": 1, 
-            "R1": 0, 
-            "x": 0, 
-            "circle": 1, 
-            "triangle": 0, 
-            "L2": 0, 
-            "R2": 0, 
-            "ly": 0, 
-            "lx": 0, 
-            "rx": 0, 
-            "message_rate": 20, 
-            "ry": 0, 
-            "dpady": 0, 
-            "dpadx": 0})
-
-
-total_pwm_change_first_half = ninety - zero
-total_pwm_change_second_half = one_eight - zero
-
-
-pwm_per_degree_first_half = total_pwm_change_first_half/mid_degrees
-pwm_per_degree_second_half = total_pwm_change_second_half/total_degrees
+    Move.look_right()
+    Move.look_upperright()
+    Move.look_up()
+    Move.look_upperleft()
+    Move.look_left()
+    Move.look_leftlower()
+    Move.look_down()
+    Move.look_rightlower()
+    Move.look_right()
+    Move.stop()
+    Move.move_right()
+    Move.move_forward()
+    Move.move_left()
+    Move.move_backward()
+    Move.move_right()
+    Move.stop()
 
 
 
