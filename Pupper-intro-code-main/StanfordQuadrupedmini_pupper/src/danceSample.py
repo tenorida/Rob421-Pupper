@@ -42,11 +42,11 @@ from UDPComms import Publisher
 import time
 from MovementGroup import MovementGroups
 from movement_commands_dance import trot
-#Move = MovementGroups()
+Move = MovementGroups()
 
 trot()
 time.sleep(0.2)
-MovementGroups.look_right()
+Move.look_right()
 MovementGroups.look_upperright()
 MovementGroups.look_up()
 MovementGroups.look_upperleft()
