@@ -205,7 +205,7 @@ if __name__ == "__main__":
     time.sleep(1)
     for i in range(0,2):
         #    to the left
-        move_left() works
+        move_left()
         #time.sleep(2)
         #    take it back now y'all
         #move_backwards()
