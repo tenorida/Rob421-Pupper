@@ -233,7 +233,7 @@ if __name__ == "__main__":
         MoveServos.move_servo12()
         time.sleep(1)
         #MoveServos.move_servo12()
-        time.sleep(1)
+        #time.sleep(1)
         #    cha cha real smooth
         #move_chacha()
         print ("done")
