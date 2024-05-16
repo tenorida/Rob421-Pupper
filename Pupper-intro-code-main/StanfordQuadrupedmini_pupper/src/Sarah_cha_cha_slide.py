@@ -135,7 +135,7 @@ def move_backwards():
             "L2": 0, 
             "R2": 0, 
             "ly": -1, 
-            "lx": 0, 
+            "lx": 1, 
             "rx": 0, 
             "message_rate": 20, 
             "ry": 0, 
@@ -236,7 +236,7 @@ pwm_per_degree_second_half = total_pwm_change_second_half/total_degrees
 if __name__ == "__main__":
     activate()
     time.sleep(1)
-    for i in range(0,4):
+    for i in range(0,2):
         #    to the left
         #move_left() works
         #time.sleep(2)
