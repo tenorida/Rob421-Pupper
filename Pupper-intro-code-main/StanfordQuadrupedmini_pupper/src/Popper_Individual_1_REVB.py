@@ -57,5 +57,3 @@ if __name__ == "__main__":
         time.sleep(1)
         controller.move_left()
     controller.stop()
-
-# NOTE: Function and method calls are commented to prevent execution during the initial phase.
