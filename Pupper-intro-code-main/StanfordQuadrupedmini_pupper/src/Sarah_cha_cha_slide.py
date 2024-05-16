@@ -222,7 +222,7 @@ if __name__ == "__main__":
         #    one hop this time
         move_jumpdown()
         #time.sleep(1)
-        move_jumpup()
+        #move_jumpup()
         #time.sleep(1)
         #    right foot two stomps
         #MoveServos.move_servo13()
