@@ -210,7 +210,7 @@ if __name__ == "__main__":
     while True:
         print("move left")
         move_left()
-            time.sleep(0.2)
+        time.sleep(0.2)
         #    take it back now y'all
         #move_backwards()
         time.sleep(2)
