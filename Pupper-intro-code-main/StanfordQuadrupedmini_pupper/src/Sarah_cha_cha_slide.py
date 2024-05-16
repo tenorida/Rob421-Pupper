@@ -170,11 +170,11 @@ def move_jumpup():
 
 def jump():
     move_jumpup()
-    time.sleep(0.2)
+    time.sleep(0.5)
     move_jumpup()
-    time.sleep(0.2)
+    time.sleep(0.5)
     move_jumpup()
-    time.sleep(0.2)
+    time.sleep(0.5)
     
 
 def move_chacha():
@@ -201,6 +201,7 @@ def move_chacha():
 if __name__ == "__main__":
     activate()
     time.sleep(1)
+    jump()
     # for i in range(0,2):
     #     trot()
     #     time.sleep(1)
@@ -218,7 +219,7 @@ if __name__ == "__main__":
         #move_jumpup()
         #time.sleep(1)
         #    one hop this time
-        jump()
+        # jump()
         #time.sleep(1)
         #move_jumpup()
         #time.sleep(1)
