@@ -173,8 +173,6 @@ def jump():
     time.sleep(0.5)
     move_jumpup()
     time.sleep(0.5)
-    move_jumpup()
-    time.sleep(0.5)
     
 
 def move_chacha():
