@@ -86,7 +86,7 @@ def move_foward():
             "triangle": 0, 
             "L2": 0, 
             "R2": 0, 
-            "ly": 1, 
+            "ly": 0.5, 
             "lx": 0, 
             "rx": 0, 
             "message_rate": 20, 
@@ -119,7 +119,7 @@ def move_right():
             "L2": 0, 
             "R2": 0, 
             "ly": 0, 
-            "lx": 1, 
+            "lx": 0.3, 
             "rx": 0, 
             "message_rate": 20, 
             "ry": 0, 
@@ -209,32 +209,32 @@ if __name__ == "__main__":
         #    to the left
     while True:
         print("move left")
-        move_left()
-        time.sleep(1)
+        #move_left()
+        #time.sleep(1)
         #    take it back now y'all
-        move_backwards()
-        time.sleep(1)
+        #move_backwards()
+        #time.sleep(1)
         #    one hop this time
-        move_jumpdown()
-        time.sleep(1)
+        #move_jumpdown()
+        #time.sleep(1)
         #move_jumpup()
-        time.sleep(1)
+        #time.sleep(1)
         #    one hop this time
-        move_jumpdown()
-        time.sleep(1)
-        move_jumpup()
-        time.sleep(1)
+        #move_jumpdown()
+        #time.sleep(1)
+        #move_jumpup()
+        #time.sleep(1)
         #    right foot two stomps
         MoveServos.move_servo13()
         time.sleep(1)
-        MoveServos.move_servo13()
-        time.sleep(1)
+        #MoveServos.move_servo13()
+        #time.sleep(1)
         #    left foot two stomps
         MoveServos.move_servo12()
         time.sleep(1)
-        MoveServos.move_servo12()
+        #MoveServos.move_servo12()
         time.sleep(1)
         #    cha cha real smooth
-        move_chacha()
+        #move_chacha()
         print ("done")
     stop()
