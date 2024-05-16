@@ -12,6 +12,16 @@
 # rx = turn left or right (pitch)
 # ry = pitches the robot forward
 
+import os
+import sys
+import time
+
+zero = 500000
+ninety = 1500000
+one_eight = 2500000 
+total_degrees = 180
+mid_degrees = 90
+
 from  leg_move import MoveServos
 from  leg_move import MoveServos
 
@@ -125,7 +135,7 @@ def move_backwards():
             "L2": 0, 
             "R2": 0, 
             "ly": -1, 
-            "lx": 1, 
+            "lx": 0, 
             "rx": 0, 
             "message_rate": 20, 
             "ry": 0, 
@@ -166,7 +176,7 @@ def move_jumpup():
 def move_chacha():
     drive_pub.send({"L1": 1, 
             "R1": 0, 
-            "x": 1, 
+            "x": 0, 
             "circle": 1, 
             "triangle": 0, 
             "L2": 0, 
@@ -178,17 +188,6 @@ def move_chacha():
             "ry": 0, 
             "dpady": 0, 
             "dpadx": 0})
-
-import os
-import sys
-import time
-
-zero = 500000
-ninety = 1500000
-one_eight = 2500000 
-total_degrees = 180
-mid_degrees = 90
-
 
 
 def move_frontrightfoot():
