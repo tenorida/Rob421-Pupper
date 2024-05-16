@@ -46,10 +46,10 @@ class RobotController:
         self.send_command({})  # Send default command
 
     def move_forward(self):
-        self.send_command({"ly": 1})
+        self.send_command({"ly": 0.2})
 
     def move_left(self):
-        self.send_command({"lx": -1})
+        self.send_command({"lx": -0.2})
 
     def move_right(self):
         self.send_command({"lx": 1})
