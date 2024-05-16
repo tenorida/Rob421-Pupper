@@ -220,18 +220,18 @@ if __name__ == "__main__":
         #move_jumpup()
         #time.sleep(1)
         #    one hop this time
-        #move_jumpdown()
+        move_jumpdown()
         #time.sleep(1)
-        #move_jumpup()
+        move_jumpup()
         #time.sleep(1)
         #    right foot two stomps
-        MoveServos.move_servo13()
-        time.sleep(1)
+        #MoveServos.move_servo13()
+        #time.sleep(1)
         #MoveServos.move_servo13()
         #time.sleep(1)
         #    left foot two stomps
-        MoveServos.move_servo10()
-        time.sleep(1)
+        #MoveServos.move_servo10()
+        #time.sleep(1)
         #MoveServos.move_servo10()
         #time.sleep(1)
         #    cha cha real smooth
