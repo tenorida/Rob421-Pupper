@@ -79,7 +79,7 @@ if __name__ == "__main__":
 
 
 
-    for idx in range(4):
+        for idx in range(4):
             controller.trot()
             start_time = time.time()
             duration = 0.5
@@ -103,5 +103,5 @@ if __name__ == "__main__":
             while time.time() < end_time:
                 controller.move_left()
                 time.sleep(0.02)
-    
+
         controller.stop()
