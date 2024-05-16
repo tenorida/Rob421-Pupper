@@ -225,14 +225,14 @@ if __name__ == "__main__":
         move_jumpup()
         time.sleep(1)
         #    right foot two stomps
-        move_servo13()
+        MoveServos.move_servo13()
         time.sleep(1)
-        move_servo13()
+        MoveServos.move_servo13()
         time.sleep(1)
         #    left foot two stomps
-        move_servo11()
+        MoveServos.move_servo11()
         time.sleep(1)
-        move_servo11()
+        MoveServos.move_servo11()
         time.sleep(1)
         #    cha cha real smooth
         move_chacha()
