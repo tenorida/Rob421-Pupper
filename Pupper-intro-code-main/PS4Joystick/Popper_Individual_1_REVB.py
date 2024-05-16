@@ -83,21 +83,21 @@ if __name__ == "__main__":
 
         while time.time() < end_time:
             controller.move_forward()
-            time.sleep(0.09)  
+            time.sleep(0.2)  
 
         end_time = time.time() + duration
         while time.time() < end_time:
             controller.move_left()
-            time.sleep(0.09)
+            time.sleep(0.2)
 
         end_time = time.time() + duration
         while time.time() < end_time:
             controller.move_backwards()
-            time.sleep(0.09)
+            time.sleep(0.2)
 
         end_time = time.time() + duration
         while time.time() < end_time:
             controller.move_left()
-            time.sleep(0.09)
+            time.sleep(0.2)
 
     controller.stop()
