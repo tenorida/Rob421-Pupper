@@ -118,7 +118,7 @@ def move_backwards():
 if __name__ == "__main__":
     ActDeactivate()
     time.sleep(1)
-    trot()
+    #trot()
     print("start trot")
     time.sleep(1)
     t0 = time.time()
