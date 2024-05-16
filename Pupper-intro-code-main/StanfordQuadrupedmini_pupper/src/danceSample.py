@@ -37,7 +37,7 @@
 # move_leftback()
 # move_rightback()
 #
-from src.MovementGroup import MovementGroups
+from MovementGroup import MovementGroups
 
 Move = MovementGroups()
 
