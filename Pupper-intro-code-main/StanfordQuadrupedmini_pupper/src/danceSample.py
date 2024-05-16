@@ -41,13 +41,15 @@
 from UDPComms import Publisher
 import time
 from MovementGroup import MovementGroups
-from movement_commands_dance import trot, ActDeactivate
+from movement_commands_dance import trot, ActDeactivate, move_left
 Move = MovementGroups()
 
 ActDeactivate()
 time.sleep(0.2)
 trot()
 time.sleep(0.2)
+move_left()
+
 # Move.look_right()
 # MovementGroups.look_upperright()
 # MovementGroups.look_up()
@@ -59,7 +61,7 @@ time.sleep(0.2)
 # MovementGroups.look_right()
 # MovementGroups.stop()
 # MovementGroups.move_right()
-Move.move_forward()
+# Move.move_forward()
 # MovementGroups.move_left()
 # MovementGroups.move_backward()
 # MovementGroups.move_right()
