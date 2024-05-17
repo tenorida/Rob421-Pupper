@@ -66,7 +66,7 @@ class RobotController:
     def stop(self):
         self.send_command({})  # Send default command
 
-    def move_forward(self, speed=0.2):
+    def move_forward(self, speed=-0.2):
         self.send_command({"ly": speed})
 
     def move_left(self, speed=-0.2):
@@ -75,7 +75,7 @@ class RobotController:
     def move_right(self, speed=0.2):
         self.send_command({"lx": speed})
 
-    def move_backwards(self, speed=-0.2):
+    def move_backwards(self, speed=0.2):
         self.send_command({"ly": speed})
 
     def act_deactivate(self):
