@@ -1,4 +1,3 @@
-ment#
 # Copyright 2023 MangDang (www.mangdang.net) 
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
