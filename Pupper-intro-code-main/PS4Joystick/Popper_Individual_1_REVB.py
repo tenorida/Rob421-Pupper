@@ -107,7 +107,7 @@ if __name__ == "__main__":
     #     print(f"end\n time: {end_time}")
     # controller.stop()
 
-    for _ in range(4):
+    for idx in range(4):
         controller.trot()
         time.sleep(0.2)
 
