@@ -131,9 +131,9 @@ if __name__ == "__main__":
     #     print(f"end\n time: {end_time}")
     # controller.stop()
 
-    for idx in range(4):
-        controller.trot()
-        time.sleep(0.2)
+    # for idx in range(4):
+    #     controller.trot()
+    #     time.sleep(0.2)
 
         t0 = time.time()
         diff = (time.time() - t0) * 1000  # milliseconds
