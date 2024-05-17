@@ -41,7 +41,7 @@
 from UDPComms import Publisher
 import time
 from MovementGroup import MovementGroups
-from movement_commands_dance import movement_commands_dance
+from movement_commands_dance import DanceMoveCommands
 Move = MovementGroups()
 
 ActDeactivate()
