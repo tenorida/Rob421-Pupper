@@ -87,8 +87,12 @@ class RobotController:
 if __name__ == "__main__":
     controller = RobotController()
     controller.activate()
+    time.sleep(1)
     controller.trot()
     time.sleep(1)
+    controller.move_forward()
+    time.sleep(1)
+    controller.stop()
     # for idx in range(4):
     #     controller.trot()
     #     time.sleep(0.2)
@@ -179,4 +183,4 @@ if __name__ == "__main__":
 
     # controller.act_deactivate()
 
-    controller.stop()
+    # controller.stop()
