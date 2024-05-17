@@ -36,6 +36,27 @@ class RobotController:
         except Exception as e:
             print("Failed to send command: {e}")
 
+    # def activate(self):
+    #     self.send_command({"L1": 1})
+
+    # def trot(self):
+    #     self.send_command({"R1": 0.2})
+
+    # def stop(self):
+    #     self.send_command({})  # Send default command
+
+    # def move_forward(self):
+    #     self.send_command({"ly": 0.2})
+
+    # def move_left(self):
+    #     self.send_command({"lx": -0.2})
+
+    # def move_right(self):
+    #     self.send_command({"lx": 0.2})
+
+    # def move_backwards(self):
+    #     self.send_command({"ly": -0.2})
+
     def activate(self):
         self.send_command({"L1": 1})
 
@@ -45,17 +66,20 @@ class RobotController:
     def stop(self):
         self.send_command({})  # Send default command
 
-    def move_forward(self):
-        self.send_command({"ly": 0.2})
+    def move_forward(self, speed=0.2):
+        self.send_command({"ly": speed})
 
-    def move_left(self):
-        self.send_command({"lx": -0.2})
+    def move_left(self, speed=-0.2):
+        self.send_command({"lx": speed})
 
-    def move_right(self):
-        self.send_command({"lx": 0.2})
+    def move_right(self, speed=0.2):
+        self.send_command({"lx": speed})
 
-    def move_backwards(self):
-        self.send_command({"ly": -0.2})
+    def move_backwards(self, speed=-0.2):
+        self.send_command({"ly": speed})
+
+    def act_deactivate(self):
+        self.send_command({"L1": 0})
 
 
 # Main Execution
