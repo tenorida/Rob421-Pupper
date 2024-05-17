@@ -89,7 +89,7 @@ def move_foward():
             "dpady": 0, 
             "dpadx": 0})
     
-def move_left(x):
+def move_left():
     drive_pub.send({"L1": 1, 
             "R1": 0, 
             "x": 0, 
@@ -98,7 +98,7 @@ def move_left(x):
             "L2": 0, 
             "R2": 0, 
             "ly": 0, 
-            "lx": x, 
+            "lx": 0.3, 
             "rx": 0, 
             "message_rate": 20, 
             "ry": 0, 
@@ -197,9 +197,9 @@ def move_chacha():
 
 
 if __name__ == "__main__":
-    activate()
-    time.sleep(1)
-    jump()
+    # activate()
+    # time.sleep(1)
+    # jump()
     # for i in range(0,2):
     #     trot()
     #     time.sleep(1)
