@@ -66,7 +66,7 @@ class RobotController:
     def stop(self):
         self.send_command({})  # Send default command
 
-    def move_forward(self, speed=-0.2):
+    def move_forward(self, speed=0.2):
         self.send_command({"ly": speed})
 
     def move_left(self, speed=-0.2):
@@ -75,7 +75,7 @@ class RobotController:
     def move_right(self, speed=0.2):
         self.send_command({"lx": speed})
 
-    def move_backwards(self, speed=0.2):
+    def move_backwards(self, speed=-0.2):
         self.send_command({"ly": speed})
 
     def act_deactivate(self):
@@ -90,8 +90,17 @@ if __name__ == "__main__":
     time.sleep(1)
     controller.trot()
     time.sleep(1)
-    controller.move_forward()
-    time.sleep(1)
+    t0 = time.time()
+    diff = (time.time() - t0)
+    
+    while diff < 10000:
+        controller.move_forward()
+        time.sleep(0.1)
+        #print("adjusting")
+        #move_left()
+        #time.sleep(5)
+        diff = (time.time() - t0) * pow(10,3) # msec
+    
     controller.stop()
     # for idx in range(4):
     #     controller.trot()
