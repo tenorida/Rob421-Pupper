@@ -135,49 +135,49 @@ if __name__ == "__main__":
     #     controller.trot()
     #     time.sleep(0.2)
 
-        t0 = time.time()
+    t0 = time.time()
+    diff = (time.time() - t0) * 1000  # milliseconds
+    print(f"Start time: {t0 * 1000} ms")
+    print(f"Initial diff: {diff} ms")
+    print("Moving forward")
+
+    while diff < 10000:  # 10 seconds
+        controller.move_forward(0.4)
+        time.sleep(0.1)
         diff = (time.time() - t0) * 1000  # milliseconds
-        print(f"Start time: {t0 * 1000} ms")
-        print(f"Initial diff: {diff} ms")
-        print("Moving forward")
+        print(f"Elapsed time: {diff} ms")
 
-        while diff < 10000:  # 10 seconds
-            controller.move_forward(0.4)
-            time.sleep(0.1)
-            diff = (time.time() - t0) * 1000  # milliseconds
-            print(f"Elapsed time: {diff} ms")
+    controller.act_deactivate()
+    time.sleep(1)
+    
+    t0 = time.time()
+    diff = (time.time() - t0) * 1000
+    print("Moving left")
 
-        controller.act_deactivate()
-        time.sleep(1)
-        
-        t0 = time.time()
+    while diff < 5000:  # 5 seconds
+        controller.move_left()
+        time.sleep(0.1)
         diff = (time.time() - t0) * 1000
-        print("Moving left")
+        print(f"Elapsed time: {diff} ms")
 
-        while diff < 5000:  # 5 seconds
-            controller.move_left()
-            time.sleep(0.1)
-            diff = (time.time() - t0) * 1000
-            print(f"Elapsed time: {diff} ms")
+    t0 = time.time()
+    diff = (time.time() - t0) * 1000
+    print("Moving backwards")
 
-        t0 = time.time()
+    while diff < 5000:  # 5 seconds
+        controller.move_backwards()
+        time.sleep(0.1)
         diff = (time.time() - t0) * 1000
-        print("Moving backwards")
+        print(f"Elapsed time: {diff} ms")
 
-        while diff < 5000:  # 5 seconds
-            controller.move_backwards()
-            time.sleep(0.1)
-            diff = (time.time() - t0) * 1000
-            print(f"Elapsed time: {diff} ms")
+    t0 = time.time()
+    diff = (time.time() - t0) * 1000
+    print("Moving left again")
 
-        t0 = time.time()
+    while diff < 5000:  # 5 seconds
+        controller.move_left()
+        time.sleep(0.1)
         diff = (time.time() - t0) * 1000
-        print("Moving left again")
+        print(f"Elapsed time: {diff} ms")
 
-        while diff < 5000:  # 5 seconds
-            controller.move_left()
-            time.sleep(0.1)
-            diff = (time.time() - t0) * 1000
-            print(f"Elapsed time: {diff} ms")
-
-    controller.stop()
+controller.stop()
