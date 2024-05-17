@@ -40,7 +40,7 @@ class RobotController:
         self.send_command({"L1": 1})
 
     def trot(self):
-        self.send_command({"R1": 1})
+        self.send_command({"R1": 0.2})
 
     def stop(self):
         self.send_command({})  # Send default command
@@ -52,10 +52,10 @@ class RobotController:
         self.send_command({"lx": -0.2})
 
     def move_right(self):
-        self.send_command({"lx": 1})
+        self.send_command({"lx": 0.2})
 
     def move_backwards(self):
-        self.send_command({"ly": -1})
+        self.send_command({"ly": -0.2})
 
 
 # Main Execution
