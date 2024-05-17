@@ -206,7 +206,7 @@ if __name__ == "__main__":
     #     #    to the left
     while True:
         #print("move left")
-        #move_left()
+        move_left()
         #time.sleep(1)
         #    take it back now y'all
         #move_backwards()
@@ -217,7 +217,7 @@ if __name__ == "__main__":
         #move_jumpup()
         #time.sleep(1)
         #    one hop this time
-        jump()
+        #jump()
         #time.sleep(1)
         #move_jumpup()
         #time.slep(1)
