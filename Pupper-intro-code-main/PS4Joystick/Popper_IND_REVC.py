@@ -81,6 +81,12 @@ class RobotController:
     def act_deactivate(self):
         self.send_command({"L1": 0})
 
+    def run_for_duration(self, action, duration, speed=0.2):
+        start_time = time.time()
+        while (time.time() - start_time) * 1000 < duration * 1000:  # Convert to msec
+            action(speed)
+            time.sleep(0.1)
+
 
 # Main Execution
 
@@ -90,18 +96,39 @@ if __name__ == "__main__":
     time.sleep(1)
     controller.trot()
     time.sleep(1)
-    t0 = time.time()
-    diff = (time.time() - t0)
-    
-    while diff < 10000:
-        controller.move_forward()
-        time.sleep(0.1)
-        #print("adjusting")
-        #move_left()
-        #time.sleep(5)
-        diff = (time.time() - t0) * pow(10,3) # msec
-    
+
+    controller.run_for_duration(controller.move_forward, 10, 0.4)
+
     controller.act_deactivate()
+
+
+    
+    # controller = RobotController()
+    # controller.activate()
+    # time.sleep(1)
+    # controller.trot()
+    # time.sleep(1)
+    # t0 = time.time()
+    # diff = (time.time() - t0)
+    
+    # while diff < 10000:
+    #     controller.move_forward()
+    #     time.sleep(0.1)
+    #     #print("adjusting")
+    #     #move_left()
+    #     #time.sleep(5)
+    #     diff = (time.time() - t0) * pow(10,3) # msec
+    
+    # controller.act_deactivate()
+
+
+
+
+
+
+
+
+    
     # for idx in range(4):
     #     controller.trot()
     #     time.sleep(0.2)
