@@ -108,8 +108,23 @@ def move_backwards():
             "L2": 0, 
             "R2": 0, 
             "ly": -1, 
-            "lx": 1, 
+            "lx": 0, 
             "rx": 0, 
+            "message_rate": 20, 
+            "ry": 0, 
+            "dpady": 0, 
+            "dpadx": 0})
+def pitch(x):
+    drive_pub.send({"L1": 0, 
+            "R1": 0, 
+            "x": 0, 
+            "circle": 0, 
+            "triangle": 0, 
+            "L2": 0, 
+            "R2": 0, 
+            "ly": 0, 
+            "lx":0, 
+            "rx": x, 
             "message_rate": 20, 
             "ry": 0, 
             "dpady": 0, 
@@ -129,6 +144,7 @@ if __name__ == "__main__":
     while diff < 10000:
         move_forward(0.4)
         time.sleep(0.1)
+
         #print("adjusting")
         #move_left()
         #time.sleep(5)
