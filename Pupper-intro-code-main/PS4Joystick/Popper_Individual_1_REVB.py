@@ -81,24 +81,26 @@ if __name__ == "__main__":
         start_time = time.time()
         duration = 0.5
         end_time = start_time + duration
-
+        print("forward")
         while time.time() < end_time:
             controller.move_forward()
-            time.sleep(0.09)  
+            time.sleep(0.09)
+        print("left")  
 
         end_time = time.time() + duration
         while time.time() < end_time:
             controller.move_left()
             time.sleep(0.09)
+        print("back")
 
         end_time = time.time() + duration
         while time.time() < end_time:
             controller.move_backwards()
             time.sleep(0.09)
-
+        print("left")
         end_time = time.time() + duration
         while time.time() < end_time:
             controller.move_left()
             time.sleep(0.09)
-
+        print("end")
     controller.stop()
