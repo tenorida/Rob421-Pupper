@@ -145,7 +145,7 @@ if __name__ == "__main__":
     while diff < 7000:
         move_forward(0.4)
         time.sleep(0.1)
-        if (i/2)== i//2:
+        if (i/6)== i//6:
             pitch(-0.1)
         #print("adjusting")
         #move_left()
