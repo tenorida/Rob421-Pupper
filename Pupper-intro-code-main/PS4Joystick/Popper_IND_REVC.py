@@ -81,6 +81,9 @@ class RobotController:
     def act_deactivate(self):
         self.send_command({"L1": 0})
 
+    def pitch(self, x):
+        self.send_command({"rx": x})
+
     def run_for_duration(self, action, duration, speed=0.2):
         start_time = time.time()
         while (time.time() - start_time) * 1000 < duration * 1000:  # Convert to msec
@@ -97,7 +100,8 @@ if __name__ == "__main__":
     controller.trot()
     time.sleep(1)
 
-    controller.run_for_duration(controller.move_forward, 10, 0.4)
+    controller.run_for_duration(controller.move_forward, 10, 0.4)    # Forward Control
+    controller.run_for_duration(controller.pitch, 5, 0.5)    # Pitch Control
 
     controller.act_deactivate()
 
