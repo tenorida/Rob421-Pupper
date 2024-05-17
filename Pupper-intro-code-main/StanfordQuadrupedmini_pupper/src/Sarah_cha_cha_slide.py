@@ -89,7 +89,7 @@ def move_foward():
             "dpady": 0, 
             "dpadx": 0})
     
-def move_left():
+def move_left(x):
     drive_pub.send({"L1": 1, 
             "R1": 0, 
             "x": 0, 
@@ -98,7 +98,7 @@ def move_left():
             "L2": 0, 
             "R2": 0, 
             "ly": 0, 
-            "lx": -0.3, 
+            "lx": x, 
             "rx": 0, 
             "message_rate": 20, 
             "ry": 0, 
@@ -205,7 +205,7 @@ if __name__ == "__main__":
     #     time.sleep(1)
     #     #    to the left
     while True:
-        print("move left")
+        #print("move left")
         #move_left()
         #time.sleep(1)
         #    take it back now y'all
@@ -227,7 +227,7 @@ if __name__ == "__main__":
         #MoveServos.move_servo13()
         #time.sleep(1)
         #    left foot two stomps
-        #MoveServos.move_servo10()
+        MoveServos.move_servo10()
         #time.sleep(1)
         #MoveServos.move_servo10()
         #time.sleep(1)
