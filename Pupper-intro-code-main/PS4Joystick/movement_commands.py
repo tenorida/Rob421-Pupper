@@ -141,11 +141,10 @@ if __name__ == "__main__":
     print (t0 * pow(10,3))
     print(diff* pow(10,3))
     print("moving foward")
-    pitch(-0.05)
     while diff < 10000:
         move_forward(0.4)
         time.sleep(0.1)
-        #pitch(-0.01)
+        #pitch(-0.001)
         #print("adjusting")
         #move_left()
         #time.sleep(5)
