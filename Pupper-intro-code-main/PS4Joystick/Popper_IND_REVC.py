@@ -146,9 +146,7 @@ if __name__ == "__main__":
         diff = (time.time() - t0) * 1000  # milliseconds
         print(f"Elapsed time: {diff} ms")
 
-    controller.act_deactivate()
-    time.sleep(1)
-
+    
     t0 = time.time()
     diff = (time.time() - t0) * 1000
     print("Moving left")
@@ -178,5 +176,7 @@ if __name__ == "__main__":
         time.sleep(0.1)
         diff = (time.time() - t0) * 1000
         print(f"Elapsed time: {diff} ms")
+
+    controller.act_deactivate()
 
     controller.stop()
