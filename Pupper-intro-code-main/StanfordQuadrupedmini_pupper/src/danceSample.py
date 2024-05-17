@@ -1,4 +1,4 @@
-#
+ment#
 # Copyright 2023 MangDang (www.mangdang.net) 
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -41,7 +41,7 @@
 from UDPComms import Publisher
 import time
 from MovementGroup import MovementGroups
-from movement_commands_dance import DanceMoveCommands
+from MovementCommandsDance import DanceMoveCommands
 Move = MovementGroups()
 
 
