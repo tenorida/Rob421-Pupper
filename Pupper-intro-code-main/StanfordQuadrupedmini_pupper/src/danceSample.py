@@ -44,8 +44,7 @@ from MovementGroup import MovementGroups
 from movement_commands_dance import DanceMoveCommands
 Move = MovementGroups()
 
-ActDeactivate()
-time.sleep(0.2)
+
 trot()
 time.sleep(0.2)
 move_left()
