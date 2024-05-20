@@ -250,8 +250,7 @@ class MovementGroups:
 if __name__ == "__main__":
     Move = MovementGroups()
 
-    MovementLib()
-    
+    callproc(look_upperright())
     # print("start moving")
     # Move.look_upperright()
     # print("moving")
