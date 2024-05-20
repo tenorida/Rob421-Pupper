@@ -36,27 +36,6 @@ class RobotController:
         except Exception as e:
             print("Failed to send command: {e}")
 
-    # def activate(self):
-    #     self.send_command({"L1": 1})
-
-    # def trot(self):
-    #     self.send_command({"R1": 0.2})
-
-    # def stop(self):
-    #     self.send_command({})  # Send default command
-
-    # def move_forward(self):
-    #     self.send_command({"ly": 0.2})
-
-    # def move_left(self):
-    #     self.send_command({"lx": -0.2})
-
-    # def move_right(self):
-    #     self.send_command({"lx": 0.2})
-
-    # def move_backwards(self):
-    #     self.send_command({"ly": -0.2})
-
     def activate(self):
         self.send_command({"L1": 1})
 
@@ -103,124 +82,16 @@ if __name__ == "__main__":
     controller.run_for_duration(controller.move_forward, 10, 0.4)    # Forward Control
     controller.run_for_duration(controller.pitch, 5, 0.2)    # Pitch Control
 
+    controller.stop()
+    time.sleep(0.5)
+
+    controller.run_for_duration(controller.move_left, 5, -0.2)
+
+    controller.stop()
+    time.sleep(0.5)
+
+    controller.run_for_duration(controller.move_backwards, 5, -0.2)
+
+    controller.run_for_duration(controller.pitch, 5, 0.2)
+
     controller.act_deactivate()
-
-
-    
-    # controller = RobotController()
-    # controller.activate()
-    # time.sleep(1)
-    # controller.trot()
-    # time.sleep(1)
-    # t0 = time.time()
-    # diff = (time.time() - t0)
-    
-    # while diff < 10000:
-    #     controller.move_forward()
-    #     time.sleep(0.1)
-    #     #print("adjusting")
-    #     #move_left()
-    #     #time.sleep(5)
-    #     diff = (time.time() - t0) * pow(10,3) # msec
-    
-    # controller.act_deactivate()
-
-
-
-
-
-
-
-
-    
-    # for idx in range(4):
-    #     controller.trot()
-    #     time.sleep(0.2)
-    #     controller.move_forward()
-    #     time.sleep(0.2)
-    #     controller.move_left()
-    #     time.sleep(0.2)
-    #     controller.move_backwards()
-    #     time.sleep(0.2)
-    #     controller.move_left()
-    # controller.stop()
-
-    # for idx in range(4):
-    #     # controller.trot()
-    #     start_time = time.time()
-    #     duration = 0.5
-    #     end_time = start_time + duration
-    #     print(f"forward\n time: {start_time}")
-    #     while time.time() < end_time:
-    #         controller.move_forward()
-    #         time.sleep(0.1)
-    #     print(f"left\n time: {end_time}")
-
-    #     end_time = time.time() + duration
-    #     while time.time() < end_time:
-    #         controller.move_left()
-    #         time.sleep(0.1)
-    #     print(f"back\n time: {end_time}")
-
-    #     end_time = time.time() + duration
-    #     while time.time() < end_time:
-    #         controller.move_backwards()
-    #         time.sleep(0.1)
-    #     print(f"left\n time: {end_time}")
-    #     end_time = time.time() + duration
-    #     while time.time() < end_time:
-    #         controller.move_left()
-    #         time.sleep(0.1)
-    #     print(f"end\n time: {end_time}")
-    # controller.stop()
-
-    # for idx in range(4):
-    #     controller.trot()
-    #     time.sleep(0.2)
-
-    # t0 = time.time()
-    # diff = (time.time() - t0) * 1000  # milliseconds
-    # print(f"Start time: {t0 * 1000} ms")
-    # print(f"Initial diff: {diff} ms")
-    # print("Moving forward")
-
-    # while diff < 10000:  # 10 seconds
-    #     controller.move_forward(0.4)
-    #     time.sleep(0.1)
-    #     diff = (time.time() - t0) * 1000  # milliseconds
-    #     print(f"Elapsed time: {diff} ms")
-
-    
-    # # t0 = time.time()
-    # # diff = (time.time() - t0) * 1000
-    # # print("Moving left")
-
-    # # while diff < 5000:  # 5 seconds
-    #     controller.move_left()
-    #     time.sleep(0.1)
-    #     diff = (time.time() - t0) * 1000
-    #     # print(f"Elapsed time: {diff} ms")
-
-    # # t0 = time.time()
-    # # diff = (time.time() - t0) * 1000
-    # # print("Moving backwards")
-
-    # # while diff < 5000:  # 5 seconds
-    #     controller.move_backwards()
-    #     time.sleep(0.1)
-    #     # diff = (time.time() - t0) * 1000
-    #     # print(f"Elapsed time: {diff} ms")
-
-    # t0 = time.time()
-    # diff = (time.time() - t0) * 1000
-    # # print("Moving left again")
-
-    # while diff < 5000:  # 5 seconds
-    #     controller.move_left()
-    #     time.sleep(0.1)
-    #     diff = (time.time() - t0) * 1000
-    #     # print(f"Elapsed time: {diff} ms")
-
-    # controller.act_deactivate()
-
-    # controller.stop()
