@@ -45,10 +45,10 @@ Move = MovementGroups()
 Dance = DanceMoveCommands() 
 
 
-ActDeactivate()
+Dance.ActDeactivate()
 
 
-trot()
+Dance.trot()
 # time.sleep(0.2)
 # Dance.move_left
 
