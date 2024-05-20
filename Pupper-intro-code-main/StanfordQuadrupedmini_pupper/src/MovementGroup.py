@@ -250,7 +250,7 @@ class MovementGroups:
 
 if __name__ == "__main__":
     Move = MovementGroups()
-    MovementScheme(Move.move_left())
+    MovementScheme(Move.look_left())
     
     # Scheme(Move.look_upperright())
     # print("start moving")
