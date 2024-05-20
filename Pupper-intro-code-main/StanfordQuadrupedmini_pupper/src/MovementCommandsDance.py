@@ -1,9 +1,8 @@
-cfrom UDPComms import Publisher
+from UDPComms import Publisher
 import time
 
 drive_pub = Publisher(8830)
 class DanceMoveCommands:
-    def __init__(self)
     
     def ActDeactivate(self):
         drive_pub.send({"L1": 1, 
