@@ -146,7 +146,7 @@ if __name__ == "__main__":
         #move_forward(0.4)
         time.sleep(0.1)
         #if (i/6)== i//6:
-        pitch(-1)
+        pitch(-0.5)
         #print("adjusting")
         #move_left()
         time.sleep(2)
