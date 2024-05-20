@@ -45,8 +45,8 @@ Move = MovementGroups()
 Dance = DanceMoveCommands() 
 
 
-Dance.ActDeactivate()
-
+on = Dance.ActDeactivate()
+on()
 
 Dance.trot()
 # time.sleep(0.2)
