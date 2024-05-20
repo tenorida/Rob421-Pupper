@@ -44,9 +44,7 @@ from MovementCommandsDance import DanceMoveCommands
 Move = MovementGroups()
 Dance = DanceMoveCommands() 
 
-
-on = Dance.ActDeactivate()
-on()
+Dance.ActDeactivate()
 
 Dance.trot()
 # time.sleep(0.2)
