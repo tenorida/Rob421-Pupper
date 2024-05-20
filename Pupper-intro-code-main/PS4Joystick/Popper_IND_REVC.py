@@ -77,9 +77,9 @@ if __name__ == "__main__":
     controller.activate()
     time.sleep(1)
     controller.trot()
-    time.sleep(1)
+    time.sleep(2)
 
-    #controller.run_for_duration(controller.move_forward, 2, 0.4)    # Forward Control
+    controller.run_for_duration(controller.move_forward, 2, 0.4)    # Forward Control
     # # controller.run_for_duration(controller.pitch, 2, 0.2)    # Pitch Control
 
     # # controller.stop()
