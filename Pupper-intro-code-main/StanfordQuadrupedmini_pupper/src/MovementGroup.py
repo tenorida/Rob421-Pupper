@@ -1,4 +1,4 @@
-#
+
 # Copyright 2023 MangDang (www.mangdang.net) 
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -252,7 +252,7 @@ if __name__ == "__main__":
     Move = MovementGroups()
     Scheme = MovementScheme()
     
-    Scheme.MovementScheme(Move)
+    Scheme(Move.look_upperright)
     # print("start moving")
     # Move.look_upperright()
     # print("moving")
