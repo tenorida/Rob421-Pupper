@@ -249,10 +249,13 @@ class MovementGroups:
 
 if __name__ == "__main__":
     Move = MovementGroups()
-    print("start moving")
-    Move.look_upperright()
-    print("moving")
-    Move.stop()
+
+    MovementLib()
+    
+    # print("start moving")
+    # Move.look_upperright()
+    # print("moving")
+    # Move.stop()
 
       
 """  
