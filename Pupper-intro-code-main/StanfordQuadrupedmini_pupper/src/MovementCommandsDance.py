@@ -4,7 +4,7 @@ import time
 drive_pub = Publisher(8830)
 class DanceMoveCommands:
     
-    def ActDeactivate():
+    def ActDeactivate(self):
         print("I am working")
         drive_pub.send({"L1": 1, 
                 "R1": 0, 
