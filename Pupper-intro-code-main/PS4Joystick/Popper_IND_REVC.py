@@ -63,7 +63,7 @@ class RobotController:
     def pitch(self, pitch_value):
         self.send_command({"rx": pitch_value})
 
-    def run_for_duration(self, action, duration, speed=0.2):
+    def run_for_duration(self, action, duration, speed):
         start_time = time.time()
         while (time.time() - start_time) * 1000 < duration * 1000:  # Convert to msec
             action(speed)
@@ -87,7 +87,7 @@ if __name__ == "__main__":
     # # controller.trot()
     # time.sleep(1)
 
-    controller.run_for_duration(controller.move_left, 5)
+    controller.run_for_duration(controller.move_left, 5,-0.2)
     # controller.run_for_duration(controller.pitch, 2, 0.2)    # Pitch Control
 
     # controller.trot()
