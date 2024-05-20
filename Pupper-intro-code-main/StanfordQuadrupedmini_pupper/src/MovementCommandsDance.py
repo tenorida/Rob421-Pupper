@@ -19,7 +19,7 @@ class DanceMoveCommands:
                 "dpady": 0, 
                 "dpadx": 0})
     
-    def trot():
+    def trot(self):
         drive_pub.send({"L1": 0, 
                 "R1": 1, 
                 "x": 0, 
