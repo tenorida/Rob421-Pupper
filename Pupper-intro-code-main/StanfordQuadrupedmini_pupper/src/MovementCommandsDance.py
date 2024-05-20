@@ -119,8 +119,8 @@ class DanceMoveCommands:
 
 if __name__ == "__main__":
     DanceMoveCommands.ActDeactivate()
-#     time.sleep(1)
-#     DanceMoveCommands.trot()
+    time.sleep(1)
+    DanceMoveCommands.trot()
 #     print("start trot")
 #     time.sleep(1)
 #     t0 = time.time()
