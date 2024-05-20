@@ -117,7 +117,7 @@ class DanceMoveCommands:
                 "dpady": 0, 
                 "dpadx": 0})
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
     # DanceMoveCommands.ActDeactivate()
     # time.sleep(1)
     # DanceMoveCommands.trot()
