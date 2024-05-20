@@ -58,7 +58,7 @@ class RobotController:
         self.send_command({"ly": speed})
 
     def act_deactivate(self):
-        self.send_command({"L1": 0})
+        self.send_command({"L1": 1})
 
     def pitch(self, pitch_value):
         self.send_command({"rx": pitch_value})
