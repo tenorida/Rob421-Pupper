@@ -142,14 +142,14 @@ if __name__ == "__main__":
     print(diff* pow(10,3))
     print("moving foward")
     i = 0
-    while diff < 7000:
+    while diff < 10000:
         #move_forward(0.4)
         time.sleep(0.1)
         #if (i/6)== i//6:
         pitch(-1)
         #print("adjusting")
         #move_left()
-        #time.sleep(5)
+        time.sleep(2)
         diff = (time.time() - t0) * pow(10,3) # msec
         #print(diff)
     ActDeactivate()
