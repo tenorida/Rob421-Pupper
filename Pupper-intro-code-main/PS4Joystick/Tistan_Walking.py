@@ -115,4 +115,5 @@ if __name__ == "__main__":
     time.sleep(2)
     move_forward()
     time.sleep(5)
-    time.stop()
+    deactivate()
+    
