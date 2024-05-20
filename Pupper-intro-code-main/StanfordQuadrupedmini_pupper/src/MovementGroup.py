@@ -245,7 +245,13 @@ class MovementGroups:
         dance_scheme.setAllSequence(dance_all_legs,dance_speed,dance_attitude)
         self.MovementLib.append(dance_scheme)      # append dance
         return self.MovementLib
-        
+
+
+if __name__ == "__main__":
+    look_upperright()
+    print("moving")
+    stop()
+
       
 """  
     #multiple move in one movement example1
