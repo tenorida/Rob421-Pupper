@@ -4,7 +4,7 @@ import time
 
 
 # Open the default camera 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0, cv2.CAP_V4L)
 
 while True:
     # Capture frame-by-frame
