@@ -248,8 +248,9 @@ class MovementGroups:
 
 
 if __name__ == "__main__":
+    Move = MovementGroups()
     print("start moving")
-    self.look_upperright()
+    Move.look_upperright()
     print("moving")
     stop()
 
