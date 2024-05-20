@@ -164,7 +164,7 @@ if __name__ == "__main__":
         #pitch(0.5)
         #time.sleep(3)
         pitch(-0.5)
-        time.sleep(3)
+        #time.sleep(3)
         #print(diff)
     stop()
     print("done")
