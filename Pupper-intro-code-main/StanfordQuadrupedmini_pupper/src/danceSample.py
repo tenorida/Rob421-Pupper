@@ -44,9 +44,9 @@ from MovementCommandsDance import DanceMoveCommands
 Move = MovementGroups()
 Dance = DanceMoveCommands() 
 
-# Dance.trot()
+Dance.trot
 # time.sleep(0.2)
-Dance.move_left()
+Dance.move_left
 
 # Move.look_right()
 # Move.look_upperright()
