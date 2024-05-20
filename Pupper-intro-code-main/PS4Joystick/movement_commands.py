@@ -157,7 +157,7 @@ if __name__ == "__main__":
         #print("adjusting")
         #move_left()
         #if (i/75)== i//75:
-        pitch(0.5)
+        pitch(0.1)
         #time.sleep(3)
         #pitch(0.1)
         #time.sleep(3)
