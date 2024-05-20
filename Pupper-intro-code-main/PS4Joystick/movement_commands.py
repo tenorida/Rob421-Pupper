@@ -167,6 +167,7 @@ if __name__ == "__main__":
             print("adjusting")
         #time.sleep(3)
         #print(diff)
+        i+=1
     stop()
     print("done")
 
