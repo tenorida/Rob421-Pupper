@@ -1,12 +1,15 @@
 from UDPComms import Publisher
 import time
 
-drive_pub = Publisher(8830)
+# drive_pub = Publisher(8830)
 class DanceMoveCommands:
-    
+
+    def __init__(self):
+        self.drive_pub = Publisher(8830) 
+        
     def ActDeactivate(self):
         print("I am working")
-        drive_pub.send({"L1": 1, 
+        self.drive_pub.send({"L1": 1, 
                 "R1": 0, 
                 "x": 0, 
                 "circle": 0, 
@@ -22,7 +25,7 @@ class DanceMoveCommands:
                 "dpadx": 0})
     
     def trot(self):
-        drive_pub.send({"L1": 0, 
+        self.drive_pub.send({"L1": 0, 
                 "R1": 1, 
                 "x": 0, 
                 "circle": 0, 
