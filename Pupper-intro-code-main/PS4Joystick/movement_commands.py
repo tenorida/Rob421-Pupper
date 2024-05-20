@@ -143,7 +143,7 @@ if __name__ == "__main__":
     print("moving foward")
     i = 0
     while diff < 10000:
-        move_forward(0.5)
+        move_forward(0.6)
         #time.sleep(0.1)
         #if (i/6)== i//6:
         pitch(-0.1)
