@@ -149,7 +149,7 @@ if __name__ == "__main__":
         #pitch(-0.5)
         #print("adjusting")
         #move_left()
-        time.sleep(2)
+        #time.sleep(2)
         diff = (time.time() - t0) * pow(10,3) # msec
         #print(diff)
     ActDeactivate()
