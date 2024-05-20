@@ -42,7 +42,7 @@ import time
 from MovementGroup import MovementGroups
 from MovementCommandsDance import DanceMoveCommands
 Move = MovementGroups()
-Dance = DanceMoveCommands()
+Dance = DanceMoveCommands() 
 
 # Dance.trot()
 # time.sleep(0.2)
