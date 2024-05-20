@@ -84,14 +84,14 @@ if __name__ == "__main__":
 
     # controller.stop()
     # time.sleep(2)
-    controller.trot()
+    # controller.trot()
     time.sleep(1)
 
     controller.run_for_duration(controller.move_left, 5)
     controller.run_for_duration(controller.pitch, 2, 0.2)    # Pitch Control
 
     # controller.trot()
-    # time.sleep(1)
+    time.sleep(1)
 
     controller.run_for_duration(controller.move_right, 10)
     controller.run_for_duration(controller.pitch, 2, 0.2)    # Pitch Control    
@@ -99,11 +99,13 @@ if __name__ == "__main__":
     # controller.stop()
     # time.sleep(2)
     # controller.trot()
-    # time.sleep(1)
+    time.sleep(1)
 
     controller.run_for_duration(controller.move_backwards, 5, -0.2)
     controller.run_for_duration(controller.pitch, 2, 0.2)    # Pitch Control
-
+    
+    time.sleep(1)
+    
     controller.run_for_duration(controller.move_forward, 2, 0.4)    # Forward Control
     controller.run_for_duration(controller.pitch, 2, 0.2)    # Pitch Control
 
