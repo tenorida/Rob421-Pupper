@@ -156,14 +156,14 @@ if __name__ == "__main__":
         #time.sleep(0.1)
         #print("adjusting")
         #move_left()
-        #if (i/6)== i//6:
+        if (i/20)== i//20:
         #pitch(-0.1)
         #time.sleep(3)
         #pitch(0.1)
         #time.sleep(3)
         #pitch(0.5)
         #time.sleep(3)
-        pitch(-0.05)
+            pitch(-0.05)
         #time.sleep(3)
         #print(diff)
     stop()
