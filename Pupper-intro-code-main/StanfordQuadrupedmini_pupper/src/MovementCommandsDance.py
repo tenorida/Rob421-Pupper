@@ -4,7 +4,7 @@ import time
 drive_pub = Publisher(8830)
 class DanceMoveCommands:
     
-    def ActDeactivate():
+    def ActDeactivate(self):
         print("I am working")
         drive_pub.send({"L1": 1, 
                 "R1": 0, 
@@ -21,7 +21,7 @@ class DanceMoveCommands:
                 "dpady": 0, 
                 "dpadx": 0})
     
-    def trot():
+    def trot(self):
         drive_pub.send({"L1": 0, 
                 "R1": 1, 
                 "x": 0, 
@@ -118,9 +118,9 @@ class DanceMoveCommands:
                 "dpadx": 0})
 
 if __name__ == "__main__":
-    DanceMoveCommands.ActDeactivate()
-    time.sleep(1)
-    DanceMoveCommands.trot()
+    # DanceMoveCommands.ActDeactivate()
+    # time.sleep(1)
+    # DanceMoveCommands.trot()
 #     print("start trot")
 #     time.sleep(1)
 #     t0 = time.time()
