@@ -51,7 +51,7 @@ class RobotController:
     def move_left(self, speed=-0.5):
         self.send_command({"lx": speed})
 
-    def move_right(self, speed=0.2):
+    def move_right(self, speed=0.3):
         self.send_command({"lx": speed})
 
     def move_backwards(self, speed=-0.2):
