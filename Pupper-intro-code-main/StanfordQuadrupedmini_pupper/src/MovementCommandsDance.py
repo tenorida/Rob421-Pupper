@@ -115,24 +115,24 @@ class DanceMoveCommands:
                 "dpady": 0, 
                 "dpadx": 0})
 
-if __name__ == "__main__":
-    DanceMoveCommands.ActDeactivate()
-    time.sleep(1)
-    DanceMoveCommands.trot()
-    print("start trot")
-    time.sleep(1)
-    t0 = time.time()
-    diff = (time.time() - t0)
-    print (t0 * pow(10,3))
-    print(diff* pow(10,3))
-    print("moving foward")
-    while diff < 10000:
-        DanceMoveCommands.move_forward(0.4)
-        time.sleep(0.1)
-        #print("adjusting")
-        #move_left()
-        #time.sleep(5)
-        diff = (time.time() - t0) * pow(10,3) # msec
-        #print(diff)
-    DanceMoveCommands.ActDeactivate()
-    print("done")
+# if __name__ == "__main__":
+#     DanceMoveCommands.ActDeactivate()
+#     time.sleep(1)
+#     DanceMoveCommands.trot()
+#     print("start trot")
+#     time.sleep(1)
+#     t0 = time.time()
+#     diff = (time.time() - t0)
+#     print (t0 * pow(10,3))
+#     print(diff* pow(10,3))
+#     print("moving foward")
+#     while diff < 10000:
+#         DanceMoveCommands.move_forward(0.4)
+#         time.sleep(0.1)
+#         #print("adjusting")
+#         #move_left()
+#         #time.sleep(5)
+#         diff = (time.time() - t0) * pow(10,3) # msec
+#         #print(diff)
+#     DanceMoveCommands.ActDeactivate()
+#     print("done")
