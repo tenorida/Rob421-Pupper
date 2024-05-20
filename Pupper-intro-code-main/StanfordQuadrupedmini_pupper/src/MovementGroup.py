@@ -252,7 +252,7 @@ if __name__ == "__main__":
     print("start moving")
     Move.look_upperright()
     print("moving")
-    stop()
+    Move.stop()
 
       
 """  
