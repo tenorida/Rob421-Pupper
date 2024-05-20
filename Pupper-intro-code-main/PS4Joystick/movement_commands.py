@@ -152,7 +152,7 @@ if __name__ == "__main__":
     i = 0
     while diff < 10000:
         diff = (time.time() - t0) * pow(10,3) # msec
-        move_forward(0.6)
+        #move_forward(0.6)
         #time.sleep(0.1)
         #print("adjusting")
         #move_left()
