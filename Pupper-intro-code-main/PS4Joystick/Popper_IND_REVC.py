@@ -40,7 +40,7 @@ class RobotController:
         self.send_command({"L1": 1})
 
     def trot(self):
-        self.send_command({"R1": 0.2})
+        self.send_command({"R1": 1})
 
     def stop(self):
         self.send_command({})  # Send default command
