@@ -44,14 +44,14 @@ from MovementCommandsDance import DanceMoveCommands
 Move = MovementGroups()
 Dance = DanceMoveCommands() 
 
-Dance.ActDeactivate()
+# Dance.ActDeactivate()
 
-Dance.trot()
+# Dance.trot()
 # time.sleep(0.2)
 # Dance.move_left
 
 # Move.look_right()
-# Move.look_upperright()
+ Move.look_upperright()
 # Move.look_up()
 # Move.look_upperleft()
 # Move.look_left()
