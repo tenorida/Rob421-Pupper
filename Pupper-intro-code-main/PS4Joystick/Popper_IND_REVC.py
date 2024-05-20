@@ -85,17 +85,23 @@ if __name__ == "__main__":
     # controller.stop()
     # time.sleep(2)
     controller.trot()
-    time.sleep(1)
+    time.sleep(2)
 
     controller.run_for_duration(controller.move_left, 5, 0.2)
+    controller.run_for_duration(controller.pitch, 2, 0.2)    # Pitch Control
+
+    controller.trot()
+    time.sleep(1)
+
+    controller.run_for_duration(controller.move_right, 5, -0.2)
+    controller.run_for_duration(controller.pitch, 2, 0.2)    # Pitch Control    
 
     # controller.stop()
     # time.sleep(2)
     controller.trot()
-    time.sleep(1)
+    time.sleep(2)
 
     controller.run_for_duration(controller.move_backwards, 5, -0.2)
-
-    controller.run_for_duration(controller.pitch, 3, 0.2)
+    controller.run_for_duration(controller.pitch, 2, 0.2)    # Pitch Control
 
     controller.act_deactivate()
