@@ -51,7 +51,7 @@ Dance = DanceMoveCommands()
 # Dance.move_left
 
 # Move.look_right()
- Move.look_upperright()
+Move.look_upperright()
 # Move.look_up()
 # Move.look_upperleft()
 # Move.look_left()
