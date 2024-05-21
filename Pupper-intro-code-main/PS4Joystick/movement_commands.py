@@ -4,7 +4,7 @@ import time
 
 drive_pub = Publisher(8830)
 
-def Activate():
+def activate():
     drive_pub.send({"L1": 1, 
             "R1": 0, 
             "x": 0, 
@@ -116,7 +116,7 @@ def move_backwards(x=-1):
             "dpady": 0, 
             "dpadx": 0})
     
-def pitch(x=0.1):
+def pitch_left(x=0.1):
     drive_pub.send({"L1": 0, 
             "R1": 0, 
             "x": 0, 
@@ -131,43 +131,54 @@ def pitch(x=0.1):
             "ry": 0, 
             "dpady": 0, 
             "dpadx": 0})
+    
+def pitch_right(x=0.1):
+    drive_pub.send({"L1": 0, 
+            "R1": 0, 
+            "x": 0, 
+            "circle": 0, 
+            "triangle": 0, 
+            "L2": 0, 
+            "R2": 0, 
+            "ly": 0, 
+            "lx":0, 
+            "rx": -1*x, 
+            "message_rate": 20, 
+            "ry": 0, 
+            "dpady": 0, 
+            "dpadx": 0})
 
-def InP(Val,S1,S2,F1,F2):
-    range1=np.array([S1,S2])
-    range2=np.array([F1,F2])
+def InP(Val):
+    range1=np.array([0,90])
+    range2=np.array([0,1])
     newVal = np.interp(Val, range1, range2)
     return newVal
 
+def RunTime(t_in):
+    diff = (time.time() - t_in)
+    return diff
+
+
 if __name__ == "__main__":
-    Activate()
+    activate()
     time.sleep(1)
-    trot()
     print("start trot")
+    trot()
     time.sleep(1)
-    t0 = time.time()
-    diff = (time.time() - t0)
-    print (t0 * pow(10,3))
-    print(diff* pow(10,3))
+
     print("moving foward")
-    i = 0
-    while diff < 5000:
-        diff = (time.time() - t0) * pow(10,3) # msec
-        move_forward(0.6)
-        #time.sleep(0.1)
-        #print("adjusting")
-        #move_left()
-        #if (i/2)== i//2:
-        #pitch(0.2)
-        #time.sleep(3)
-        #pitch(0.1)
-        #time.sleep(3)
+    t0 = time.time()
+    while RunTime(t0) < 5000:
+        move_forward(0.5)
+        time.sleep(1)
+        pitch_left(InP(20))
+        time.sleep(3)
+        pitch_right(InP(10))
+        time.sleep(3)
         #pitch(0.5)
         #time.sleep(3)
         #pitch(0.1)
-        #print("adjusting")
-        #time.sleep(3)S
-        #print(diff)
-        i+=1
+        #time.sleep(3)
     stop()
     print("done")
 
