@@ -20,7 +20,7 @@
 #                 Level 3(for beyond): Samples delicately control the foot locations, move speed and attitudes at each execution times
 #
 import numpy as np
-from src.MovementScheme import Movements 
+from MovementScheme_updated import Movements 
 
 class MovementGroups:
 
