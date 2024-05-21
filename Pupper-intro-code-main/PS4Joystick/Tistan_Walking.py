@@ -127,7 +127,7 @@ if __name__ == "__main__":
     time.sleep(1)
     move_right(2.5)
     time.sleep(1)
-    move_backwards(2.5)
+    move_backward(2.5)
     time.sleep(1)
     deactivate()
 
