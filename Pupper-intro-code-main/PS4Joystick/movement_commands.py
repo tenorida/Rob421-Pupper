@@ -163,7 +163,7 @@ if __name__ == "__main__":
         #time.sleep(3)
         #pitch(0.5)
         #time.sleep(3)
-        pitch(1)
+        pitch(0.1)
         #print("adjusting")
         #time.sleep(3)S
         #print(diff)
