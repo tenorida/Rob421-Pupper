@@ -150,7 +150,7 @@ if __name__ == "__main__":
     print(diff* pow(10,3))
     print("moving foward")
     i = 0
-    while diff < 10000:
+    while diff < 5000:
         diff = (time.time() - t0) * pow(10,3) # msec
         move_forward(0.6)
         #time.sleep(0.1)
@@ -163,8 +163,8 @@ if __name__ == "__main__":
         #time.sleep(3)
         #pitch(0.5)
         #time.sleep(3)
-        pitch(0.00001)
-            #print("adjusting")
+        pitch(1)
+        #print("adjusting")
         #time.sleep(3)S
         #print(diff)
         i+=1
