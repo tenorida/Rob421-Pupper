@@ -55,7 +55,7 @@
 # backleg_lift(leg_index, ht,   time_uni, time_acc)
 # 
 
-from src.MovementGroup import MovementGroups
+from MovementGroup_updated import MovementGroups
 
 Move = MovementGroups()
 
