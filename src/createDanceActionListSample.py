@@ -61,6 +61,7 @@ Move = MovementGroups()
 
 # movements without input parameters
 Move.look_right()
+print("why work?")
 Move.look_upperright()
 Move.look_up()
 Move.look_upperleft()
