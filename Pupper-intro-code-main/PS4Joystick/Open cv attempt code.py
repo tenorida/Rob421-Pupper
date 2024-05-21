@@ -8,7 +8,7 @@ cap = cv2.VideoCapture(0, cv2.CAP_V4L)
 
 while cap.isOpened():
     # Capture frame-by-frame
-    ret, frame = cap.read()
+    ret, frame = cap.open()
 
     # Display the resulting frame
     cv2.imshow('Webcam', frame)
