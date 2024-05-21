@@ -1,6 +1,7 @@
 
 from UDPComms import Publisher
 import time
+import cv2
 
 drive_pub = Publisher(8830) 
 arm_pub = Publisher(8410)
@@ -30,7 +31,7 @@ def activate():
             "dpady": 0, 
             "dpadx": 0})
     
-def stop():
+def deactivate():
     drive_pub.send({"L1": 0, 
             "R1": 0, 
             "x": 0, 
@@ -109,11 +110,29 @@ def move_right():
             "ry": 0, 
             "dpady": 0, 
             "dpadx": 0})
-    
+
+# Open the default camera 
+cap = cv2.VideoCapture(0, cv2.CAP_V4L)
+
+while True:
+    # Capture frame-by-frame
+    ret, frame = cap.read()
+
+    # Display the resulting frame
+    cv2.imshow('Webcam', frame)
+
+    # Break the loop if 'q' is pressed
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+        
 if __name__ == "__main__":
     activate()
-    time.sleep(2)
+    time.sleep(5)
     move_forward()
     time.sleep(5)
     deactivate()
+
+cap.release()
+cv2.destroyAllWindows()
+
     
