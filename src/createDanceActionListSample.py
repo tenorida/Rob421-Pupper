@@ -80,6 +80,7 @@ Move.stop()
 
 # movements with input parameters
 Move.head_move(20)
+print("don't wanna")
 Move.stop()
 Move.body_row(10)
 Move.body_row(-10)
