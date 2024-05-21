@@ -168,7 +168,7 @@ if __name__ == "__main__":
 
     print("moving foward")
     t0 = time.time()
-    while RunTime(t0) < 5000:
+    while RunTime(t0) < 7000:
         move_forward(0.5)
         time.sleep(1)
         pitch_left(InP(20))
