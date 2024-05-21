@@ -103,18 +103,18 @@ def move_right(y=1):
             "dpadx": 0})
 
 # Open the default camera, if changing initial number doesn't work Raphael said use 0,cv2.CAP_V4L
-cap = cv2.VideoCapture(0)
+#cap = cv2.VideoCapture(0)
 
-while True:
+#while True:
     # Capture frame-by-frame
-    ret, frame = cap.read()
+    #ret, frame = cap.read()
 
     # Display the resulting frame
-    cv2.imshow('Webcam', frame)
+    #cv2.imshow('Webcam', frame)
 
     # Break the loop if 'q' is pressed
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+    #if cv2.waitKey(1) & 0xFF == ord('q'):
+        #break
 
 time.sleep(5) #giving camera time to boot up before movement
 
@@ -132,7 +132,7 @@ if __name__ == "__main__":
     deactivate()
 
 time.sleep(5)
-cap.release()
-cv2.destroyAllWindows()
+#cap.release()
+#cv2.destroyAllWindows()
 
     
