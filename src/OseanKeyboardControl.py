@@ -38,9 +38,9 @@
 import curses
 import numpy as np
 import time
-from src.Controller import Controller
-from src.Command import Command
-from src.State import BehaviorState, State
+from Controller import Controller
+from Command import Command
+from State import BehaviorState, State
 from MangDang.mini_pupper.HardwareInterface import HardwareInterface
 from MangDang.mini_pupper.Config import Configuration
 from pupper.Kinematics import four_legs_inverse_kinematics
