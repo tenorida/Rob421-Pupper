@@ -110,30 +110,32 @@ def main():
             screen.refresh()
 
             #adjust velocity based on keyboard presses:
-            if(keypressed == 'w'):
+            if(keypressed == 'w'):    #forward
                 command.horizontal_velocity = np.array([0.2,0])
-            elif(keypressed == 's'):
+            elif(keypressed == 's'):    #backward
                 command.horizontal_velocity = np.array([-0.2,0])
-            elif(keypressed == 'd'):
-                command.horizontal_velocity = np.array([0,0.2])
-            elif(keypressed == 'a'):
-                command.horizontal_velocity = np.array([0,-0.2])
-            elif(keypressed == 'e'):
-                command.yaw_rate = 0.7
-            elif(keypressed == 'q'):
-                command.yaw_rate = -0.7
-            elif(keypressed == 'p'):
-                command.horizontal_velocity = np.array([0,0])
+            elif(keypressed == 'd'):    #shift right
+                command.horizontal_velocity = np.array([0,0.1])
+            elif(keypressed == 'a'):    #shift left
+                command.horizontal_velocity = np.array([0,-0.1])
+            elif(keypressed == 'e'):    #turn right
+                command.yaw_rate = 0.5
+            elif(keypressed == 'q'):    #turn left
+                command.yaw_rate = -0.5
+            elif(keypressed == 'p'):    #move diagonally right?
+                command.horizontal_velocity = np.array([0.1,0.1])
                 command.yaw_rate = 0.0
-            elif(keypressed == 'i'):
-                keypressed = 'p'
-                prevkey = 'p'
-                command.pitch += 0.1
+            elif(keypressed == 'i'):    #move diagonally left
+                command.horizontal_velocity = np.array([-0.1,-0.1])
+                command.yaw_rate = 0.0
+                # keypressed = 'p'
+                # prevkey = 'p'
+                # command.pitch += 0.1
             elif(keypressed == 'k'):
                 keypressed = 'p'
                 prevkey = 'p'
                 command.pitch -= 0.1
-            elif(keypressed == 'r'):
+            elif(keypressed == 'r'):    #death (stops)
                 command.horizontal_velocity = np.array([0,0])
                 command.yaw_rate = 0.0
                 command.pitch = 0.0
