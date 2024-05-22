@@ -111,9 +111,9 @@ def main():
 
             #adjust velocity based on keyboard presses:
             if(keypressed == 'w'):    #forward
-                command.horizontal_velocity = np.array([0.2,0])
+                command.horizontal_velocity = np.array([0.1,0])
             elif(keypressed == 's'):    #backward
-                command.horizontal_velocity = np.array([-0.2,0])
+                command.horizontal_velocity = np.array([-0.1,0])
             elif(keypressed == 'd'):    #shift right
                 command.horizontal_velocity = np.array([0,0.1])
             elif(keypressed == 'a'):    #shift left
