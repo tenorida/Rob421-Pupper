@@ -119,18 +119,43 @@ def main():
             elif(keypressed == 'a'):    #shift left
                 command.horizontal_velocity = np.array([0,-0.1])
             elif(keypressed == 'e'):    #turn right
-                command.yaw_rate = 0.5
+                command.yaw_rate = 0.2
             elif(keypressed == 'q'):    #turn left
-                command.yaw_rate = -0.5
+                command.yaw_rate = -0.2
             elif(keypressed == 'p'):    #move diagonally right?
                 command.horizontal_velocity = np.array([0.1,0.1])
-                command.yaw_rate = 0.0
-            elif(keypressed == 'i'):    #move diagonally left
+                command.yaw_rate = 0.1
+            elif(keypressed == 'i'):    #move diagonally left?
                 command.horizontal_velocity = np.array([-0.1,-0.1])
-                command.yaw_rate = 0.0
+                command.yaw_rate = -0.1
                 # keypressed = 'p'
                 # prevkey = 'p'
                 # command.pitch += 0.1
+
+            
+            elif(keypressed == 'j'):    #roll left
+                command.horizontal_velocity = np.array([0.1,0.1])
+                command.roll = -0.5
+                command.roll += -0.1
+            elif(keypressed == 'k'):    #roll right
+                command.horizontal_velocity = np.array([0.1,0.1])
+                command.roll = 0.5
+                command.roll += 0.1
+            elif(keypressed == 'u'):    #pitch up
+                command.horizontal_velocity = np.array([0.1,0.1])
+                command.pitch = 0.1
+                command.pitch += 0.1
+            elif(keypressed == 'n'):    #pitch down
+                command.horizontal_velocity = np.array([0.1,0.1])
+                command.pitch = -0.1
+                command.pitch += -0.1
+            
+            
+            
+            
+            
+            
+            
             elif(keypressed == 'k'):
                 keypressed = 'p'
                 prevkey = 'p'
