@@ -1,5 +1,5 @@
 #Python Pupper Saultz_Tristan Individual Artifact#
-import cv2 as cv 
+import cv2 
 import time
 
 
