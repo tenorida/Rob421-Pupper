@@ -2,7 +2,7 @@
 
 from UDPComms import Publisher
 import time
-import cv2
+#import cv2
 
 drive_pub = Publisher(8830) 
 
@@ -116,7 +116,7 @@ def move_right(y=1):
     #if cv2.waitKey(1) & 0xFF == ord('q'):
         #break
 
-time.sleep(5) #giving camera time to boot up before movement
+#time.sleep(5) #giving camera time to boot up before movement
 
 if __name__ == "__main__":
     activate()
