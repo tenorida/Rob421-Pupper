@@ -1,8 +1,8 @@
-#from UDPComms import Publisher
+from UDPComms import Publisher
 import numpy as np
 import time
 
-#drive_pub = Publisher(8830)
+drive_pub = Publisher(8830)
 
 def activate():
     drive_pub.send({"L1": 1, 
