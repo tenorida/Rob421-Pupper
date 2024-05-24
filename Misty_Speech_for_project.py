@@ -24,3 +24,26 @@ def Key_Phrase_Recognized(data): #Wake up misty with key phrase
     misty.MoveArms(-85, -85, 80, 80)
     time.sleep(2)
     
+#if chair - pushes it?
+
+
+
+
+
+
+
+
+#if human - speaks
+
+
+
+
+
+#if backpack - "whose shit is this? Get it out of here!"
+
+
+
+
+
+
+#if other object.......
