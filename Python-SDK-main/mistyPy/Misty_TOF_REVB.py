@@ -1,5 +1,6 @@
 import sys, os
 from time import sleep
+import logging
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
