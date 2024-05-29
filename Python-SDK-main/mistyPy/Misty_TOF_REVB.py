@@ -17,12 +17,12 @@ def stop_robot():
     misty_robot.stop()
 
 def move_away_from_obstacle(sensor_id):
-    if "front" in sensor_id:
-        print(f"Moving backward to avoid obstacle detected by {sensor_id}.")
-        misty_robot.drive_time(linear_velocity=-40, angular_velocity=0, time_ms=1000)
+    if "toffl" in sensor_id:
+        #print(f"Moving backward to avoid obstacle detected by {sensor_id}.")
+        misty_robot.drive(linear_velocity=-40, angular_velocity=0)
     elif "back" in sensor_id:
         print(f"Moving forward to avoid obstacle detected by {sensor_id}.")
-        misty_robot.drive_time(linear_velocity=40, angular_velocity=0, time_ms=1000)
+        misty_robot.drive(linear_velocity=40, angular_velocity=0)
 
 def tof_callback(message):
     distance = message["message"]["distanceInMeters"]
