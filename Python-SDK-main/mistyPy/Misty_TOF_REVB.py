@@ -1,5 +1,8 @@
 import sys, os
 from time import sleep
+from mistyPy.Robot import Robot
+from mistyPy.Events import Events
+import time
 
 #import websocket
 
@@ -69,9 +72,18 @@ if __name__ == "__main__":
         # back_left = misty_robot.register_event(
         #     Events.TimeOfFlight, "backleft", condition=[EventFilters.TimeOfFlightPosition.BackLeft], keep_alive=True,
         #     callback_function=tof_callback, debounce=0
-        # )
-
-        # Use the keep_alive() function to keep the main thread alive
+        # )  
+        #misty.StartObjectDetector()
+        #def recognized(data):
+        #print(data)
+        #object detection is for testing
+        # if data["message"]["description"] == 'person':
+        #     time.sleep(1)
+        #     misty.PlayAudio("s_Awe.wav", 20)
+        #     time.sleep(1)
+        #     misty.Speak("I love humans, they are my best friends")
+        #     misty.TransitionLED(0, 255, 0, 255, 255, 0, "TransitOnce", 1000)
+         # Use the keep_alive() function to keep the main thread alive
         misty_robot.keep_alive()
 
     except Exception as ex:
