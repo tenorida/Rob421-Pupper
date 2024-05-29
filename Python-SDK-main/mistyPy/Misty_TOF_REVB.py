@@ -4,10 +4,6 @@ from mistyPy.Robot import Robot
 from mistyPy.Events import Events
 import time
 
-#import websocket
-
-# from websocket import enableTrace
-
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 from mistyPy.Robot import Robot
@@ -20,21 +16,26 @@ STOP_DISTANCE = 0.2  # distance [m]] to stop the robot
 misty_robot = Robot(ROBOT_IP)
 
 
-
-
-
 def stop_robot():
     misty_robot.stop()
 
+
+#sense "obstacle" and move accordingly
 def move_away_from_obstacle(sensor_id):
-    frontsensors = ["toffl" , "toffr", "toffc"]
-    backsensors = ["tofr"]
-    if sensor_id in frontsensors:
+    
+    if "toffc" in sensor_id:
         print(f"Moving backward to avoid obstacle detected by {sensor_id}.")
         misty_robot.drive(-40, 0)
-    elif sensor_id in backsensors:
+    elif "tofr" in sensor_id:
         print(f"Moving forward to avoid obstacle detected by {sensor_id}.")
         misty_robot.drive(40, 0)
+    elif "toffl" in sensor_id:
+        print(f"Moving right to avoid obstacle detected by {sensor_id}.")
+        misty_robot.drive(20, 45)
+    elif "toffr" in sensor_id:
+        print(f"Moving left to avoid obstacle detected by {sensor_id}.")
+        misty_robot.drive(20, -45)
+
 
 def tof_callback(message):
     distance = message["message"]["distanceInMeters"]
