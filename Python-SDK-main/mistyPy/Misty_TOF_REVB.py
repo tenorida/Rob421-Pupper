@@ -24,10 +24,12 @@ def stop_robot():
     misty_robot.stop()
 
 def move_away_from_obstacle(sensor_id):
-    if "toffl" in sensor_id:
-        #print(f"Moving backward to avoid obstacle detected by {sensor_id}.")
+    frontsensors = ["toffl" , "toffr", "toffc"]
+    backsensors = ["tofr"]
+    if sensor_id in frontsensors:
+        print(f"Moving backward to avoid obstacle detected by {sensor_id}.")
         misty_robot.drive(-40, 0)
-    elif "back" in sensor_id:
+    elif sensor_id in backsensors:
         print(f"Moving forward to avoid obstacle detected by {sensor_id}.")
         misty_robot.drive(40, 0)
 
