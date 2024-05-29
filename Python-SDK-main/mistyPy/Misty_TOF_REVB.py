@@ -1,6 +1,9 @@
 import sys, os
 from time import sleep
-import logging
+
+#import websocket
+
+# from websocket import enableTrace
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
@@ -8,10 +11,14 @@ from mistyPy.Robot import Robot
 from mistyPy.Events import Events
 from mistyPy.EventFilters import EventFilters
 
-ROBOT_IP = "192.168.0.102"  # replace with your correct IP
+ROBOT_IP = "192.168.0.101"  # replace with your correct IP
 STOP_DISTANCE = 0.2  # distance [m]] to stop the robot
 
 misty_robot = Robot(ROBOT_IP)
+
+
+
+
 
 def stop_robot():
     misty_robot.stop()
@@ -19,10 +26,10 @@ def stop_robot():
 def move_away_from_obstacle(sensor_id):
     if "toffl" in sensor_id:
         #print(f"Moving backward to avoid obstacle detected by {sensor_id}.")
-        misty_robot.drive(linear_velocity=-40, angular_velocity=0)
+        misty_robot.drive(-40, 0)
     elif "back" in sensor_id:
         print(f"Moving forward to avoid obstacle detected by {sensor_id}.")
-        misty_robot.drive(linear_velocity=40, angular_velocity=0)
+        misty_robot.drive(40, 0)
 
 def tof_callback(message):
     distance = message["message"]["distanceInMeters"]
