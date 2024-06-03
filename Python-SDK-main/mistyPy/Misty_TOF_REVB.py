@@ -1,7 +1,5 @@
 import sys, os
 from time import sleep
-from mistyPy.Robot import Robot
-from mistyPy.Events import Events
 import time
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
@@ -10,7 +8,7 @@ from mistyPy.Robot import Robot
 from mistyPy.Events import Events
 from mistyPy.EventFilters import EventFilters
 
-ROBOT_IP = "192.168.0.101"  # replace with your correct IP
+ROBOT_IP = "192.168.0.100"  # replace with your correct IP
 STOP_DISTANCE = 0.2  # distance [m]] to stop the robot
 
 misty_robot = Robot(ROBOT_IP)
@@ -25,7 +23,7 @@ def move_away_from_obstacle(sensor_id):
     
     if "toffc" in sensor_id:
         print(f"Moving backward to avoid obstacle detected by {sensor_id}.")
-        misty_robot.drive(-40, 0)
+        misty_robot.drive(linearVelocity=-40, angularVelocity=0)
     elif "tofr" in sensor_id:
         print(f"Moving forward to avoid obstacle detected by {sensor_id}.")
         misty_robot.drive(40, 0)
@@ -35,6 +33,7 @@ def move_away_from_obstacle(sensor_id):
     elif "toffr" in sensor_id:
         print(f"Moving left to avoid obstacle detected by {sensor_id}.")
         misty_robot.drive(20, -45)
+        
 
 
 def tof_callback(message):
