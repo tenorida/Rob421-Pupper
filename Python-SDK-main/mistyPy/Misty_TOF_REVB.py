@@ -24,7 +24,7 @@ def move_away_from_obstacle(sensor_id):
     global processing_trigger
     if "toffc" in sensor_id:
         print(f"Moving backward to avoid obstacle detected by {sensor_id}.")
-        misty_robot.drive(linearVelocity=-10, angularVelocity=0)
+        misty_robot.drive(linearVelocity=-10, angularVelocity=5)
         time.sleep(5)
         misty_robot.drive(linearVelocity=10, angularVelocity=0)
 
@@ -97,16 +97,16 @@ if __name__ == "__main__":
         #misty_robot.stop()
     
         
-        #misty.StartObjectDetector()
-        #def recognized(data):
-        #print(data)
-        #object detection is for testing
-        # if data["message"]["description"] == 'person':
-        #     time.sleep(1)
-        #     misty.PlayAudio("s_Awe.wav", 20)
-        #     time.sleep(1)
-        #     misty.Speak("I love humans, they are my best friends")
-        #     misty.TransitionLED(0, 255, 0, 255, 255, 0, "TransitOnce", 1000)
+        misty_robot.start_object_detector()
+        def recognized(data):
+        print(data)
+        object detection is for testing
+        if data["message"]["description"] == 'person':
+            time.sleep(1)
+            misty_robot.play_audio("s_Awe.wav", 20)
+            time.sleep(1)
+            misty_robot.speak("I love humans, they are my best friends")
+            misty_robot.transition_led(0, 255, 0, 255, 255, 0, "TransitOnce", 1000)
          # Use the keep_alive() function to keep the main thread alive
         misty_robot.keep_alive()
 
