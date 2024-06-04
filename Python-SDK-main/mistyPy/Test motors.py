@@ -12,3 +12,9 @@ ROBOT_IP = "192.168.0.103"  # replace with your correct IP
 STOP_DISTANCE = 0.3  # distance [m]] to stop the robot
 
 misty_robot = Robot(ROBOT_IP)
+
+misty_robot.drive_track(leftTrackSpeed=-60, rightTrackSpeed=-20)
+time.sleep(5)
+misty_robot.drive_track(leftTrackSpeed=30, rightTrackSpeed=30)
+
+misty_robot.keep_alive()
