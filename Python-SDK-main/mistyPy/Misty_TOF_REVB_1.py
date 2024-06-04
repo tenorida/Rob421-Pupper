@@ -5,7 +5,7 @@ from mistyPy.Robot import Robot
 from mistyPy.Events import Events
 from mistyPy.EventFilters import EventFilters
 
-ROBOT_IP = "192.168.0.101"  # replace with your correct IP
+ROBOT_IP = "192.168.0.101"  # replace with correct IP
 STOP_DISTANCE = 0.3  # distance [m] to stop the robot
 
 misty_robot = Robot(ROBOT_IP)
