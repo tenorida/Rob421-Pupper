@@ -13,42 +13,34 @@ misty_robot = Robot(ROBOT_IP)
 def stop_robot():
     misty_robot.stop()
 
-# Sense "obstacle" and move accordingly
+# Sense obstacle and do move correctly
 def move_away_from_obstacle(sensor_id):
-    misty_robot.stop()
-    if "toffc" in sensor_id:
+    if sensor_id == "toffc":
         print(f"Moving backward to avoid obstacle detected by {sensor_id}.")
         misty_robot.drive(linearVelocity=-10, angularVelocity=0)
         time.sleep(5)
-        misty_robot.drive(linearVelocity=10, angularVelocity=0)
-
-    elif "tofr" in sensor_id:
-        print(f"Moving forward to avoid obstacle detected by {sensor_id}.")
-        misty_robot.drive(linearVelocity=10, angularVelocity=0)
-        time.sleep(2)
-        misty_robot.drive(linearVelocity=10, angularVelocity=0)
-
-    elif "toffl" in sensor_id:
-        print(f"Moving back and left to avoid obstacle detected by {sensor_id}.")
-        misty_robot.drive(linearVelocity=-10, angularVelocity=20)  # Left
-        time.sleep(3)
-        misty_robot.stop()
-        misty_robot.drive(linearVelocity=10, angularVelocity=0)
-
-    elif "toffr" in sensor_id:
-        print(f"Moving back and right to avoid obstacle detected by {sensor_id}.")
+    elif sensor_id == "tofr":
+        print(f"Turning left to avoid obstacle detected by {sensor_id}.")
         misty_robot.drive(linearVelocity=-10, angularVelocity=-25)  # Right
         time.sleep(3)
-        misty_robot.stop()
-        misty_robot.drive(linearVelocity=10, angularVelocity=0)
+    elif sensor_id == "toffl":
+        print(f"Turning right to avoid obstacle detected by {sensor_id}.")
+        misty_robot.drive(linearVelocity=-10, angularVelocity=25)  # Left
+        time.sleep(3)
+    misty_robot.drive(linearVelocity=10, angularVelocity=0)
+
+# Define a priority order for sensors
+SENSOR_PRIORITY = ["toffc", "tofr", "toffl"]
 
 def tof_callback(message):
     distance = message["message"]["distanceInMeters"]
     sensor_id = message["message"]["sensorId"]
     print(f"Sensor {sensor_id} detected an object at {distance:.2f} meters.")
+    
     if distance < STOP_DISTANCE:
         print(f"Object detected by {sensor_id} within {STOP_DISTANCE} meters. Stopping robot.")
-        move_away_from_obstacle(sensor_id)
+        if sensor_id in SENSOR_PRIORITY:
+            move_away_from_obstacle(sensor_id)
         time.sleep(3)
     else:
         print(f"Path clear. Continuing forward.")
