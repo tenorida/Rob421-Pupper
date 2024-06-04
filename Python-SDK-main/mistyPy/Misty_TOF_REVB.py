@@ -12,6 +12,7 @@ ROBOT_IP = "192.168.0.100"  # replace with your correct IP
 STOP_DISTANCE = 0.3  # distance [m]] to stop the robot
 
 misty_robot = Robot(ROBOT_IP)
+processing_trigger = False
 
 def stop_robot():
     misty_robot.stop()
@@ -20,6 +21,7 @@ def stop_robot():
 #sense "obstacle" and move accordingly
 def move_away_from_obstacle(sensor_id):
     misty_robot.stop()
+    global processing_trigger
     if "toffc" in sensor_id:
         print(f"Moving backward to avoid obstacle detected by {sensor_id}.")
         misty_robot.drive(linearVelocity=-10, angularVelocity=0)
@@ -44,13 +46,19 @@ def move_away_from_obstacle(sensor_id):
         misty_robot.drive(linearVelocity=-10, angularVelocity=-25) #right
         time.sleep(3)
         misty_robot.stop()
-        misty_robot.drive(linearVelocity=10, angularVelocity=0)     
+        misty_robot.drive(linearVelocity=10, angularVelocity=0) 
+    processing_trigger = False    
 
 def tof_callback(message):
+    global processing_trigger
+    if processing_trigger:
+        return  # Ignore sensor triggers while processing another one
+    
     distance = message["message"]["distanceInMeters"]
     sensor_id = message["message"]["sensorId"]
     if distance < STOP_DISTANCE:
         print(f"Object detected by {sensor_id} within {STOP_DISTANCE} meters. Stopping robot.")
+        processing_trigger = True
         move_away_from_obstacle(sensor_id)
         time.sleep(3)
     else:
