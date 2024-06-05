@@ -9,7 +9,7 @@ from mistyPy.Events import Events
 from mistyPy.EventFilters import EventFilters
 
 ROBOT_IP = "192.168.0.102"  # replace with your correct IP
-STOP_DISTANCE = 0.15  # distance [m]] to stop the robot
+STOP_DISTANCE = 0.1  # distance [m]] to stop the robot
 
 misty_robot = Robot(ROBOT_IP)
 processing_trigger = False
@@ -30,21 +30,6 @@ def move_away_from_obstacle(sensor_id):
         time.sleep(5)
         misty_robot.drive(linearVelocity=10, angularVelocity=0)
 
-
-    elif "toffl" in sensor_id < :
-        #print(f"Moving back and right to avoid obstacle detected by {sensor_id}.")
-        misty_robot.drive(linearVelocity=-10, angularVelocity=-25) #right
-        time.sleep(3)
-        misty_robot.stop()
-        misty_robot.drive(linearVelocity=10, angularVelocity=0) 
-
-    elif "toffr" in sensor_id < "toffl" in sensor_id:
-        #print(f"Moving back and left to avoid obstacle detected by {sensor_id}.")
-        misty_robot.drive(linearVelocity=-10, angularVelocity=20) #Left
-        time.sleep(3)
-        misty_robot.stop()
-        misty_robot.drive(linearVelocity=10, angularVelocity=0)
-
     elif "tofr" in sensor_id:
         #print(f"Moving forward to avoid obstacle detected by {sensor_id}.")
         misty_robot.drive(10, 0)
@@ -53,14 +38,14 @@ def move_away_from_obstacle(sensor_id):
 
     elif "toffl" in sensor_id:
         #print(f"Moving back and left to avoid obstacle detected by {sensor_id}.")
-        misty_robot.drive(linearVelocity=-10, angularVelocity=20) #Left
+        misty_robot.drive(linearVelocity=-10, angularVelocity=-20) #Left
         time.sleep(3)
         misty_robot.stop()
         misty_robot.drive(linearVelocity=10, angularVelocity=0)
 
     elif "toffr" in sensor_id:
         #print(f"Moving back and right to avoid obstacle detected by {sensor_id}.")
-        misty_robot.drive(linearVelocity=-10, angularVelocity=-25) #right
+        misty_robot.drive(linearVelocity=-10, angularVelocity=25) #right
         time.sleep(3)
         misty_robot.stop()
         misty_robot.drive(linearVelocity=10, angularVelocity=0) 
