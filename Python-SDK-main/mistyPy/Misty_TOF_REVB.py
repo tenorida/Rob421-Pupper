@@ -18,11 +18,12 @@ def stop_robot():
     misty_robot.stop()
 
 
+
 #sense "obstacle" and move accordingly
 def move_away_from_obstacle(sensor_id):
     misty_robot.stop()
     global processing_trigger
-    
+
     if "toffc" in sensor_id:
         print(f"Moving backward to avoid obstacle detected by {sensor_id}.")
         misty_robot.drive(linearVelocity=-10, angularVelocity=5)
@@ -30,7 +31,7 @@ def move_away_from_obstacle(sensor_id):
         misty_robot.drive(linearVelocity=10, angularVelocity=0)
 
 
-    elif "toffl" in sensor_id < "toffr" in sensor_id:
+    elif "toffl" in sensor_id < :
         #print(f"Moving back and right to avoid obstacle detected by {sensor_id}.")
         misty_robot.drive(linearVelocity=-10, angularVelocity=-25) #right
         time.sleep(3)
@@ -133,9 +134,9 @@ if __name__ == "__main__":
             if data["message"]["description"] == 'person':
                 misty_robot.stop()
                 time.sleep(1)
-                misty_robot.play_audio("s_Awe.wav", 20)
+                misty_robot.play_audio("s_Awe.wav", 50)
                 time.sleep(1)
-                misty_robot.speak("I love humans, they are my best friends")
+                misty_robot.speak("I love humans, they are my best friends", volume = 50)
                 misty_robot.transition_led(0, 255, 0, 255, 255, 0, "TransitOnce", 1000)
             elif data["message"]["description"] == 'backpack':
                 time.sleep(1)
