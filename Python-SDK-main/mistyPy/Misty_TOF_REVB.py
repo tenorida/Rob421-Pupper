@@ -26,8 +26,8 @@ def move_away_from_obstacle(sensor_id):
 
     if "toffc" in sensor_id:
         print(f"Moving backward to avoid obstacle detected by {sensor_id}.")
-        misty_robot.drive(linearVelocity=-10, angularVelocity=5)
-        time.sleep(5)
+        misty_robot.drive(linearVelocity=-20, angularVelocity=15)
+        time.sleep(3)
         misty_robot.drive(linearVelocity=10, angularVelocity=0)
 
     elif "tofr" in sensor_id:
