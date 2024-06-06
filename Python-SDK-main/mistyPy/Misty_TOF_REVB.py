@@ -17,6 +17,21 @@ processing_trigger = False
 def stop_robot():
     misty_robot.stop()
 
+Dic_SensorDist = {"ID":["int"], "Distance":[STOP_DISTANCE]}
+def ActiveSensor(NewID="None", NewDist=0):
+    if Dic_SensorDist["ID"][-1] is not NewID:
+        if NewDist < Dic_SensorDist["Distance"][-1]:
+            T_F = True
+            Dic_SensorDist["ID"].append(NewID)
+            Dic_SensorDist["Distance"].append(NewDist)
+        else:
+            T_F = False
+    else:
+        T_F = True
+        Dic_SensorDist["ID"].append(NewID)
+        Dic_SensorDist["Distance"].append(NewDist)
+
+    return T_F
 
 
 #sense "obstacle" and move accordingly
@@ -58,15 +73,15 @@ def tof_callback(message):
     
     distance = message["message"]["distanceInMeters"]
     sensor_id = message["message"]["sensorId"]
-    if distance < STOP_DISTANCE:
+    p = ActiveSensor(sensor_id, distance)
+
+    if distance < STOP_DISTANCE & p == True:
         print(f"Object detected by {sensor_id} within {STOP_DISTANCE} meters. Stopping robot.")
         processing_trigger = True
         move_away_from_obstacle(sensor_id)
-        time.sleep(3)
     else:
         print(f"Moving forward")
         misty_robot.drive(linearVelocity=15, angularVelocity=0)
-        
 
 if __name__ == "__main__":
     try:
